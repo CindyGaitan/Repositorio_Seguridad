@@ -1,0 +1,33 @@
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.pdb
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csprojResolveAssemblyReference.cache
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Aplicaciones.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Bitacora.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Perfiles.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.PerfilUsuario.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Principal.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Properties.Resources.resources
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
+C:\Users\Alejandra\Desktop\Prototipo\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\MySql.Data.dll
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.pdb
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\MySql.Data.dll
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\bin\Debug\MySql.Data.xml
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csprojResolveAssemblyReference.cache
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Aplicaciones.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Bitacora.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Perfiles.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.PerfilUsuario.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Principal.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Properties.Resources.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.CambioContraseña.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Login.resources
