@@ -92,6 +92,7 @@ CREATE TABLE IF NOT EXISTS `BD_seguridad`.`Detalle_aplicacion_derecho` (
   `eliminar` TINYINT(1) NOT NULL,
   `imprimir` TINYINT(1) NOT NULL,
   `consultar` TINYINT(1) NOT NULL,
+  `habilitar` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id_usuario`, `id_aplicacion`),
   INDEX `FK_detalle_usuario_idx` (`id_usuario` ASC),
   CONSTRAINT `FK_detalle_aplicacion2`
