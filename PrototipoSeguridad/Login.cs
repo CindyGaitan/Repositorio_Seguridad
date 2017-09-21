@@ -25,7 +25,7 @@ namespace PrototipoSeguridad
             InitializeComponent();
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
+                con = new MySqlConnection("server = localhost; user id = root; password=1234; database = BD_seguridad");
                 con.Open();
                 MessageBox.Show("conectado");
                 

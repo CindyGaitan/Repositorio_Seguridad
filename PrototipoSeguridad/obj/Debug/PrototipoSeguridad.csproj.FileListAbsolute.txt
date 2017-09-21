@@ -31,3 +31,20 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\P
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.CambioContraseña.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Prototipo\PrototipoSeguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Login.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csprojResolveAssemblyReference.cache
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Aplicaciones.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Bitacora.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.CambioContraseña.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Login.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Perfiles.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.PerfilUsuario.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Principal.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Properties.Resources.resources
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.pdb
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\MySql.Data.dll
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
+C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb

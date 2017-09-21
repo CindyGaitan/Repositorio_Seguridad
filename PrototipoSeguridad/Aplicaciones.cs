@@ -25,7 +25,7 @@ namespace PrototipoSeguridad
             InitializeComponent();
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
+                con = new MySqlConnection("server = localhost; user id = root; password=1234; database = BD_seguridad");
                 con.Open();
                 MessageBox.Show("conectado");
                 mostrar_aplicacion();
@@ -98,6 +98,43 @@ namespace PrototipoSeguridad
             dt = new DataTable();
             da.Fill(dt);
             dgv_aplicacion.DataSource = dt;
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                com = new MySqlCommand("update aplicacion set nombre_aplicacion = " + txt_aplicacion.Text + "descripcio_aplicacion = " + txt_aplicacion_descripcion.Text, con);
+                com.ExecuteNonQuery();
+
+                txt_aplicacion.Text = "";
+                txt_aplicacion_descripcion.Text = "";
+                mostrar_aplicacion();
+                MessageBox.Show("Datos actualizados");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Datos no actualizados");
+            }
+
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                com = new MySqlCommand("delete from aplicacion where nombre_aplicacion=" + txt_aplicacion.Text + " ", con);
+                com.ExecuteNonQuery();
+                txt_aplicacion.Text = "";
+                txt_aplicacion_descripcion.Text = "";
+
+                mostrar_aplicacion();
+                MessageBox.Show("Registro eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar, dato no puede ser eliminado");
+            }
         }
     }
 }
