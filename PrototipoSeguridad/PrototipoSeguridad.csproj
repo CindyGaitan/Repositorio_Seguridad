@@ -71,6 +71,12 @@
     <Compile Include="Aplicaciones.Designer.cs">
       <DependentUpon>Aplicaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionaPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionaPerfiles.designer.cs">
+      <DependentUpon>AsignacionaPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bitacora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Aplicaciones.resx">
       <DependentUpon>Aplicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionaPerfiles.resx">
+      <DependentUpon>AsignacionaPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
