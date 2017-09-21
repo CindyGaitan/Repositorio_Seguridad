@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using aplicacionesdeusuario;
 
 
 namespace PrototipoSeguridad
@@ -52,6 +53,12 @@ namespace PrototipoSeguridad
         {
             CambioContraseña camb = new CambioContraseña();
             camb.Show();
+        }
+
+        private void asignacionAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AsignacionaPerfiles p1 = new AsignacionaPerfiles();
+            p1.Show();
         }
     }
 }
