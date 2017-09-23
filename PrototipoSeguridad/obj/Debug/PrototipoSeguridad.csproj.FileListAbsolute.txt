@@ -48,3 +48,6 @@ C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\P
 C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\MySql.Data.dll
 C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
 C:\Users\Pierce\Documents\2017\8vo Semestre\Análisis de Sistemas II\Proyectos\Proyecto General\Seguridad\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
+C:\Users\Henrry Marroquin\Documents\GitHub\Repositorio_Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
+C:\Users\Henrry Marroquin\Documents\GitHub\Repositorio_Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
+C:\Users\Henrry Marroquin\Documents\GitHub\Repositorio_Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb

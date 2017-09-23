@@ -47,7 +47,24 @@ namespace PrototipoSeguridad
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                com = new MySqlCommand("insert into usuario (nombre_usuario, apellido_usuario, id_perfil, contrasena, correo_usuario, telefono_usuario) values ('" + txt_pNombre.Text + "', '" + txt_pApellido.Text + "', " + id + ", '" + txt_contraseña.Text + "', '" + txt_correo.Text + "', " + Convert.ToInt32(txt_telefono.Text) + ")", con);
+                com.ExecuteNonQuery();
+                txt_contraseña.Text = "";
+                txt_pNombre.Text = "";
+                txt_pApellido.Text = "";
+                txt_correo.Text = "";
+                mostrar_usuario();
+                MessageBox.Show("Datos Ingresados");
+            }
+
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Datos NO Ingresados, verifique la información. ");
+            }
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -55,7 +72,23 @@ namespace PrototipoSeguridad
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string eliminar = "delete from perfil where nombre_perfil = " + txt_pNombre.Text + " ";
+                com = new MySqlCommand(eliminar, con);
+                com.ExecuteNonQuery();
+                mostrar_usuario();
+                txt_contraseña.Text = "";
+                txt_pNombre.Text = "";
+                txt_pApellido.Text = "";
+                txt_correo.Text = "";
 
+                MessageBox.Show("Registro eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar, dato no puede ser eliminado");
+            }
         }
 
         private void Ingresar_Click(object sender, EventArgs e)
@@ -117,5 +150,60 @@ namespace PrototipoSeguridad
             }
         }
 
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string contraseña = null;
+                com = new MySqlCommand("select id_perfil from perfil where nombre_perfil =" + id + " ", con);
+                dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    contraseña = dr["contrasena"].ToString();
+                }
+                dr.Close();
+
+                com = new MySqlCommand("update usuario set nombre_usuario=" + txt_pNombre.Text + "', apellido_usuario=" + txt_pApellido.Text + ", id_perfil='" + cmb_perfil.Text + "' contrasena = " + txt_contraseña.Text + "correo_usuario =" + txt_correo + "telefono_usuario =" + txt_telefono);
+                com.ExecuteNonQuery();
+                mostrar_usuario();
+                txt_pNombre.Text = "";
+                txt_pApellido.Text = "";
+                cmb_perfil.Text = "SELECCIONE OPCION";
+                txt_contraseña.Text = "";
+                txt_correo.Text = "";
+                txt_telefono.Text = "";
+                MessageBox.Show("Datos actualizados");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Datos no actualizados");
+            }
+        }
+
+        private void dgv_usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow dgv = dgv_usuario.Rows[e.RowIndex];
+
+                txt_pNombre.Text = dgv.Cells[1].Value.ToString();
+                txt_pApellido.Text = dgv.Cells[2].Value.ToString();
+                cmb_perfil.Text = dgv.Cells[3].Value.ToString();
+                txt_contraseña.Text = dgv.Cells[4].Value.ToString();
+                txt_correo.Text = dgv.Cells[5].Value.ToString();
+                txt_telefono.Text = dgv.Cells[6].Value.ToString();
+
+
+                llenado_cmb_perfil();
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+    
     }
-}
+    }
+
