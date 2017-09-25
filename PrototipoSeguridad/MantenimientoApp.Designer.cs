@@ -1,4 +1,4 @@
-﻿namespace MantenimientoDerechosApp
+﻿namespace PrototipoSeguridad
 {
     partial class Frm_MantenimientoApp
     {

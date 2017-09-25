@@ -53,5 +53,11 @@ namespace PrototipoSeguridad
             CambioContraseña camb = new CambioContraseña();
             camb.Show();
         }
+
+        private void asignacionAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_MantenimientoApp maplicaciones = new Frm_MantenimientoApp();
+            maplicaciones.Show();
+        }
     }
 }

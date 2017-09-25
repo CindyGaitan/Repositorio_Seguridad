@@ -48,7 +48,6 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_ingresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).BeginInit();
             this.gpb_usuario.SuspendLayout();
             this.gpb_acciones_Usuario.SuspendLayout();
@@ -196,7 +195,6 @@
             this.gpb_acciones_Usuario.Controls.Add(this.btn_modificar);
             this.gpb_acciones_Usuario.Controls.Add(this.btn_guardar);
             this.gpb_acciones_Usuario.Controls.Add(this.btn_eliminar);
-            this.gpb_acciones_Usuario.Controls.Add(this.btn_ingresar);
             this.gpb_acciones_Usuario.Location = new System.Drawing.Point(375, 21);
             this.gpb_acciones_Usuario.Name = "gpb_acciones_Usuario";
             this.gpb_acciones_Usuario.Size = new System.Drawing.Size(235, 204);
@@ -208,7 +206,7 @@
             // 
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(24, 98);
+            this.btn_modificar.Location = new System.Drawing.Point(82, 79);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(89, 49);
             this.btn_modificar.TabIndex = 3;
@@ -221,7 +219,7 @@
             // 
             this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(127, 43);
+            this.btn_guardar.Location = new System.Drawing.Point(82, 24);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(89, 49);
             this.btn_guardar.TabIndex = 2;
@@ -234,7 +232,7 @@
             // 
             this.btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.Image")));
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(127, 98);
+            this.btn_eliminar.Location = new System.Drawing.Point(82, 134);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(89, 49);
             this.btn_eliminar.TabIndex = 4;
@@ -242,19 +240,6 @@
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btn_ingresar
-            // 
-            this.btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("btn_ingresar.Image")));
-            this.btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ingresar.Location = new System.Drawing.Point(24, 43);
-            this.btn_ingresar.Name = "btn_ingresar";
-            this.btn_ingresar.Size = new System.Drawing.Size(89, 49);
-            this.btn_ingresar.TabIndex = 1;
-            this.btn_ingresar.Text = "Ingresar";
-            this.btn_ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ingresar.UseVisualStyleBackColor = true;
-            this.btn_ingresar.Click += new System.EventHandler(this.Ingresar_Click);
             // 
             // Usuarios
             // 
@@ -276,7 +261,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_ingresar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_eliminar;

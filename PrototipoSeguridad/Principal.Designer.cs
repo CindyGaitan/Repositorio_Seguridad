@@ -34,12 +34,13 @@
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambioContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignacionAplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,10 +97,18 @@
             this.aplicacionesToolStripMenuItem.Text = "Aplicaciones";
             this.aplicacionesToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesToolStripMenuItem_Click);
             // 
+            // cambioContraseñaToolStripMenuItem
+            // 
+            this.cambioContraseñaToolStripMenuItem.Name = "cambioContraseñaToolStripMenuItem";
+            this.cambioContraseñaToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.cambioContraseñaToolStripMenuItem.Text = "Cambio Contraseña";
+            this.cambioContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioContraseñaToolStripMenuItem_Click);
+            // 
             // asignacionesToolStripMenuItem
             // 
             this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asignacionPerfilesToolStripMenuItem});
+            this.asignacionPerfilesToolStripMenuItem,
+            this.asignacionAplicacionesToolStripMenuItem});
             this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
             this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.asignacionesToolStripMenuItem.Text = "Asignaciones";
@@ -107,7 +116,7 @@
             // asignacionPerfilesToolStripMenuItem
             // 
             this.asignacionPerfilesToolStripMenuItem.Name = "asignacionPerfilesToolStripMenuItem";
-            this.asignacionPerfilesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.asignacionPerfilesToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.asignacionPerfilesToolStripMenuItem.Text = "Asignacion Perfiles";
             this.asignacionPerfilesToolStripMenuItem.Click += new System.EventHandler(this.asignacionPerfilesToolStripMenuItem_Click);
             // 
@@ -131,12 +140,12 @@
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
-            // cambioContraseñaToolStripMenuItem
+            // asignacionAplicacionesToolStripMenuItem
             // 
-            this.cambioContraseñaToolStripMenuItem.Name = "cambioContraseñaToolStripMenuItem";
-            this.cambioContraseñaToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.cambioContraseñaToolStripMenuItem.Text = "Cambio Contraseña";
-            this.cambioContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioContraseñaToolStripMenuItem_Click);
+            this.asignacionAplicacionesToolStripMenuItem.Name = "asignacionAplicacionesToolStripMenuItem";
+            this.asignacionAplicacionesToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.asignacionAplicacionesToolStripMenuItem.Text = "Asignacion Aplicaciones";
+            this.asignacionAplicacionesToolStripMenuItem.Click += new System.EventHandler(this.asignacionAplicacionesToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -168,6 +177,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambioContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignacionAplicacionesToolStripMenuItem;
     }
 }
 

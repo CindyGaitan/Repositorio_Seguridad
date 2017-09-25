@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace MantenimientoDerechosApp
+namespace PrototipoSeguridad
 {
     public partial class Frm_MantenimientoApp : Form
     {
@@ -370,7 +370,7 @@ namespace MantenimientoDerechosApp
 
                 MySqlCommand sentencia = new MySqlCommand();
                 sentencia.Connection = cn;
-                sentencia.CommandText = "SELECT * from Aplicacion";
+                sentencia.CommandText = "select a.nombre_aplicacion from aplicacion a inner join detalle_perfil_aplicacion dpa on  a.id_aplicacion = dpa.id_aplicacion inner join perfil p on dpa.id_perfil = p.id_perfil inner join usuario u on u.id_perfil = p.id_perfil where u.id_usuario = "+ auxG +" ";
 
                 MySqlDataAdapter da1 = new MySqlDataAdapter(sentencia);
                 DataTable dt = new DataTable();
