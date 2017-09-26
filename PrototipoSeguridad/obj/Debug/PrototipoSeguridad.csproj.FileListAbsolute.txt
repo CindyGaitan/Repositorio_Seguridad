@@ -70,3 +70,6 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Properties.Resources.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
