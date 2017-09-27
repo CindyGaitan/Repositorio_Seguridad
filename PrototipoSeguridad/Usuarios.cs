@@ -25,7 +25,7 @@ namespace PrototipoSeguridad
             InitializeComponent();
             mostrar_usuario();
             llenado_cmb_perfil();
-           
+            this.BackColor = System.Drawing.Color.LightBlue;
         }
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)

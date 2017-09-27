@@ -38,10 +38,9 @@
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionAplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.busquedaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,8 +49,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catalogoToolStripMenuItem,
             this.asignacionesToolStripMenuItem,
-            this.consultasToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.cerrarSesiónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(934, 24);
@@ -129,20 +128,6 @@
             this.asignacionAplicacionesToolStripMenuItem.Text = "Asignacion Aplicaciones";
             this.asignacionAplicacionesToolStripMenuItem.Click += new System.EventHandler(this.asignacionAplicacionesToolStripMenuItem_Click);
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.busquedaUsuarioToolStripMenuItem});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
-            // busquedaUsuarioToolStripMenuItem
-            // 
-            this.busquedaUsuarioToolStripMenuItem.Name = "busquedaUsuarioToolStripMenuItem";
-            this.busquedaUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.busquedaUsuarioToolStripMenuItem.Text = "Busqueda Usuario";
-            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -155,6 +140,12 @@
             this.asignaciónToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.asignaciónToolStripMenuItem.Text = "Asignación Perfiles a Usuario";
             this.asignaciónToolStripMenuItem.Click += new System.EventHandler(this.asignaciónToolStripMenuItem_Click);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // Principal
             // 
@@ -183,11 +174,10 @@
         private System.Windows.Forms.ToolStripMenuItem asignacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignacionPerfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem busquedaUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambioContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignacionAplicacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }
 
