@@ -59,5 +59,11 @@ namespace PrototipoSeguridad
             Frm_MantenimientoApp maplicaciones = new Frm_MantenimientoApp();
             maplicaciones.Show();
         }
+
+        private void asignaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AsignacionaPerfiles ap = new AsignacionaPerfiles();
+            ap.Show();
+        }
     }
 }

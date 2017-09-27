@@ -73,3 +73,4 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\
 C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
 C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
 C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\GitHub\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.AsignacionaPerfiles.resources

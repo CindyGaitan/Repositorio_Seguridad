@@ -1,4 +1,4 @@
-﻿namespace aplicacionesdeusuario
+﻿namespace PrototipoSeguridad
 {
     partial class AsignacionaPerfiles
     {
