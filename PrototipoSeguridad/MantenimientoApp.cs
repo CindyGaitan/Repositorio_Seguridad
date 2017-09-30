@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PrototipoSeguridad
+namespace MantenimientoDerechosApp
 {
     public partial class Frm_MantenimientoApp : Form
     {
@@ -29,12 +29,13 @@ namespace PrototipoSeguridad
 
         MySqlConnection cn = new MySqlConnection("datasource = localhost; database=BD_seguridad;username=root;password=");
         int auxG = 1;
-        int num;
-        int I, M, Im, C, E, H, us;
+        int num, act, first, last;
+        int I, M, Im, C, E, us;
         int edit, store;
         int id_user;
         int totalUser;
         int id_app;
+        int firstu, lastu;
         private void Btn_salir_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -57,14 +58,77 @@ namespace PrototipoSeguridad
                 num = Convert.ToInt32(Txt_user.Text);
             }
             cn.Close();
+            inicializar();
             primer();
 
         }
 
+        public void inicializar() {
+
+            string sql = "select * from Detalle_aplicacion_derecho LIMIT 0,1;";
+            MySqlCommand cmd = new MySqlCommand(sql, cn);
+
+            cn.Open();
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                first = Convert.ToInt32(reader["id_usuario"]);
+            }
+
+            auxG = first;
+
+            cn.Close();
+
+            sql = "select MAX(id_usuario) as id from Detalle_aplicacion_derecho;";
+            MySqlCommand cmd1 = new MySqlCommand(sql, cn);
+
+            cn.Open();
+            MySqlDataReader leer = cmd1.ExecuteReader();
+
+            if (leer.Read())
+            {
+                last = Convert.ToInt32(leer["id"]);
+            }
+
+            cn.Close();
+
+        }
+
+        public void initU() {
+            string sql = "select * from Usuario LIMIT 0,1;";
+            MySqlCommand cmd = new MySqlCommand(sql, cn);
+
+            cn.Open();
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                first = Convert.ToInt32(reader["id_usuario"]);
+            }
+
+            auxG = first;
+
+            cn.Close();
+
+            sql = "select MAX(id_usuario) as id from Usuario;";
+            MySqlCommand cmd1 = new MySqlCommand(sql, cn);
+
+            cn.Open();
+            MySqlDataReader leer = cmd1.ExecuteReader();
+
+            if (leer.Read())
+            {
+                last = Convert.ToInt32(leer["id"]);
+            }
+
+            cn.Close();
+
+        }
 
         public void primer() {
 
-            string sql = "select  U.nombre_usuario, ap.nombre_aplicacion, D.ingresar, D.modificar, D.eliminar, D.imprimir,D.consultar,D.habilitar from Usuario U, Aplicacion ap, Detalle_aplicacion_derecho D where D.id_usuario = " + auxG + " and D.id_usuario = U.id_usuario and D.id_aplicacion = ap.id_aplicacion; ";
+            string sql = "select  U.nombre_usuario, ap.nombre_aplicacion, D.ingresar, D.modificar, D.eliminar, D.imprimir,D.consultar from Usuario U, Aplicacion ap, Detalle_aplicacion_derecho D where D.id_usuario = " + auxG + " and D.id_usuario = U.id_usuario and D.id_aplicacion = ap.id_aplicacion; ";
             MySqlCommand com = new MySqlCommand(sql, cn);
 
 
@@ -80,7 +144,6 @@ namespace PrototipoSeguridad
                 Im = Convert.ToInt32(Reader["imprimir"]);
                 C = Convert.ToInt32(Reader["consultar"]);
                 E = Convert.ToInt32(Reader["eliminar"]);
-                H = Convert.ToInt32(Reader["habilitar"]);
             }
 
             if (I == 1) { Chb_insertar.Checked = true; } else { Chb_insertar.Checked = false; }
@@ -88,10 +151,8 @@ namespace PrototipoSeguridad
             if (Im == 1) { Chb_imprimir.Checked = true; } else { Chb_imprimir.Checked = false; }
             if (C == 1) { Chb_consultar.Checked = true; } else { Chb_consultar.Checked = false; }
             if (E == 1) { Chb_eliminar.Checked = true; } else { Chb_eliminar.Checked = false; }
-            if (H == 1) { Rbtn_habilitado.Checked = true; Rbtn_deshabilitado.Checked = false; } else { Rbtn_deshabilitado.Checked = true; Rbtn_habilitado.Checked = false; }
 
             cn.Close();
-
 
         }
 
@@ -102,7 +163,7 @@ namespace PrototipoSeguridad
             {
                 auxG = auxG + 1;
 
-                if (auxG > 0 && auxG <= num)
+                if (auxG >= first && auxG <= last)
                 {
                     call_users();
                     contar_userapp();
@@ -110,7 +171,7 @@ namespace PrototipoSeguridad
                 }
                 else
                 {
-                    auxG = 1;
+                    auxG = first;
                     call_users();
                     contar_userapp();
                     aceptados();
@@ -120,16 +181,15 @@ namespace PrototipoSeguridad
             }
             else
             {
-
                 auxG = auxG + 1;
 
-                if (auxG > 0 && auxG <= num)
+                if (auxG >= first && auxG <= last)
                 {
                     primer();
                 }
                 else
                 {
-                    auxG = 1;
+                    auxG = first;
                     primer();
                 }
 
@@ -143,7 +203,7 @@ namespace PrototipoSeguridad
             {
                 auxG = auxG + 1;
 
-                if (auxG > 0 && auxG <= num)
+                if (auxG >= first && auxG <= last)
                 {
                     call_users();
                     contar_userapp();
@@ -151,7 +211,7 @@ namespace PrototipoSeguridad
                 }
                 else
                 {
-                    auxG = 1;
+                    auxG = first;
                     call_users();
                     contar_userapp();
                     aceptados();
@@ -165,14 +225,14 @@ namespace PrototipoSeguridad
 
                 auxG = auxG - 1;
 
-                if (auxG > 0 && auxG <= num)
+                if (auxG >= first && auxG <= last)
                 {
                     primer();
 
                 }
                 else
                 {
-                    auxG = num;
+                    auxG = last;
                     primer();
                 }
             }
@@ -183,14 +243,14 @@ namespace PrototipoSeguridad
 
             if (store == 1)
             {
-                auxG = 1;
+                auxG = first;
                 call_users();
                 contar_userapp();
                 aceptados();
             }
             else
             {
-                auxG = 1;
+                auxG = first;
                 primer();
             }
         }
@@ -199,20 +259,21 @@ namespace PrototipoSeguridad
         {
             if (store == 1)
             {
-                auxG = num;
+                auxG = last;
                 call_users();
                 contar_userapp();
                 aceptados();
             }
             else
             {
-                auxG = num;
+                auxG = last;
                 primer();
             }
         }
 
         private void Btn_refrescar_Click(object sender, EventArgs e)
         {
+
             primer();
         }
 
@@ -235,6 +296,7 @@ namespace PrototipoSeguridad
             Txt_aplicacion.Enabled = true;
             contar_userapp();
             aceptados();
+            initU();
 
         }
 
@@ -243,6 +305,9 @@ namespace PrototipoSeguridad
             bloqueados();
             edit = 0;
             store = 0;
+            Picb_aceptar.Visible = false;
+            Cmb_aplicacion.Visible = false;
+            inicializar();
             primer();
         }
 
@@ -254,8 +319,6 @@ namespace PrototipoSeguridad
             Chb_imprimir.Enabled = false;
             Chb_insertar.Enabled = false;
             Chb_consultar.Enabled = false;
-            Rbtn_deshabilitado.Enabled = false;
-            Rbtn_habilitado.Enabled = false;
         }
 
         public void desbloqueados() {
@@ -264,8 +327,6 @@ namespace PrototipoSeguridad
             Chb_imprimir.Enabled = true;
             Chb_insertar.Enabled = true;
             Chb_consultar.Enabled = true;
-            Rbtn_deshabilitado.Enabled = true;
-            Rbtn_habilitado.Enabled = true;
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
@@ -278,6 +339,7 @@ namespace PrototipoSeguridad
 
                 if (edit == 1) {
                     boton_editar();
+                    inicializar();
                     primer();
                 }
 
@@ -299,7 +361,6 @@ namespace PrototipoSeguridad
             if (Chb_eliminar.Checked == true) { E = 1; } else { E = 0; }
             if (Chb_consultar.Checked == true) { C = 1; } else { C = 0; }
             if (Chb_imprimir.Checked == true) { Im = 1; } else { Im = 0; }
-            if (Rbtn_habilitado.Checked == true) { H = 1; } else { H = 0; }
 
 
             int o, p, q, r, s, t;
@@ -310,14 +371,12 @@ namespace PrototipoSeguridad
             MySqlCommand cmd3 = new MySqlCommand("update Detalle_aplicacion_derecho set eliminar = " + E + " where id_usuario = " + auxG, cn);
             MySqlCommand cmd4 = new MySqlCommand("update Detalle_aplicacion_derecho set imprimir = " + Im + " where id_usuario = " + auxG, cn);
             MySqlCommand cmd5 = new MySqlCommand("update Detalle_aplicacion_derecho set consultar = " + C + " where id_usuario = " + auxG, cn);
-            MySqlCommand cmd6 = new MySqlCommand("update Detalle_aplicacion_derecho set habilitar = " + H + " where id_usuario = " + auxG, cn);
 
             o = cmd1.ExecuteNonQuery();
             p = cmd2.ExecuteNonQuery();
             q = cmd3.ExecuteNonQuery();
             r = cmd4.ExecuteNonQuery();
             s = cmd5.ExecuteNonQuery();
-            t = cmd6.ExecuteNonQuery();
 
             cn.Close();
 
@@ -333,7 +392,6 @@ namespace PrototipoSeguridad
             if (Chb_eliminar.Checked == true) { E = 1; } else { E = 0; }
             if (Chb_consultar.Checked == true) { C = 1; } else { C = 0; }
             if (Chb_imprimir.Checked == true) { Im = 1; } else { Im = 0; }
-            if (Rbtn_habilitado.Checked == true) { H = 1; } else { H = 0; }
 
             cn.Open();
             MySqlCommand cmd0 = new MySqlCommand("select id_aplicacion from Aplicacion where nombre_aplicacion = '" + Cmb_aplicacion.Text + "'", cn);
@@ -347,7 +405,7 @@ namespace PrototipoSeguridad
 
 
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("insert into Detalle_aplicacion_derecho(id_usuario,id_aplicacion,ingresar, modificar,eliminar, imprimir,consultar, habilitar ) values(" + id_user +", "+ id_app +" , "+ I + ", " + M + ", " + E + ", " + Im + ", " + C + ", " + H + ")", cn);
+            MySqlCommand cmd = new MySqlCommand("insert into Detalle_aplicacion_derecho(id_usuario,id_aplicacion,ingresar, modificar,eliminar, imprimir,consultar) values(" + id_user +", "+ id_app +" , "+ I + ", " + M + ", " + E + ", " + Im + ", " + C + ")", cn);
             int g;
             g = cmd.ExecuteNonQuery();
             MessageBox.Show("Se han Agregados los privilegios a "+Txt_user.Text);
@@ -370,7 +428,7 @@ namespace PrototipoSeguridad
 
                 MySqlCommand sentencia = new MySqlCommand();
                 sentencia.Connection = cn;
-                sentencia.CommandText = "select a.nombre_aplicacion from aplicacion a inner join detalle_perfil_aplicacion dpa on  a.id_aplicacion = dpa.id_aplicacion inner join perfil p on dpa.id_perfil = p.id_perfil inner join usuario u on u.id_perfil = p.id_perfil where u.id_usuario = "+ auxG +" ";
+                sentencia.CommandText = "SELECT * from Aplicacion";
 
                 MySqlDataAdapter da1 = new MySqlDataAdapter(sentencia);
                 DataTable dt = new DataTable();
@@ -391,6 +449,33 @@ namespace PrototipoSeguridad
             }
         }
 
+        private void Btn_borrar_Click(object sender, EventArgs e)
+        {
+            cn.Open();
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("delete from Detalle_aplicacion_derecho where id_usuario = " + auxG + ";", cn);
+
+                int r;
+
+                r = cmd.ExecuteNonQuery();
+
+                cn.Close();
+                
+                MessageBox.Show("Se ha Eliminado los privilegios en este Usuario!");
+                auxG = 1;
+                inicializar();
+                primer();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("No se puede borrar este dato!");
+            }
+            finally {
+                cn.Close();
+            }
+        }
 
         public void call_users() {
 
@@ -412,7 +497,7 @@ namespace PrototipoSeguridad
 
         public void aceptados()
         {
-            if ((id_user <= totalUser) && (id_user >= 1))
+            if (totalUser == 1)
             {
                 Picb_aceptar.Visible = true;
             }
@@ -426,7 +511,7 @@ namespace PrototipoSeguridad
         public void contar_userapp() {
 
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("select count(id_usuario) as total from Detalle_aplicacion_derecho;", cn);
+            MySqlCommand cmd = new MySqlCommand("select count(id_usuario) as total from Detalle_aplicacion_derecho where id_usuario = " + id_user +";", cn);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read()) {
