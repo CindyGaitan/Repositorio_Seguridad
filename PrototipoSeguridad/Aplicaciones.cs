@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
 namespace PrototipoSeguridad
 {
-    public partial class Aplicaciones : Form
+    public partial class Aplicaciones2 : Form
     {
         MySqlConnection con;
         MySqlCommand com, com2;
@@ -20,38 +19,19 @@ namespace PrototipoSeguridad
         DataTable dt;
         MySqlDataReader dr;
 
-        public Aplicaciones()
+        public void Bloquear()
+        {
+            txt_aplicacion.Enabled = false;
+            txt_aplicacion_descripcion.Enabled = false;
+            txt_no_reporte.Enabled = false;
+            Chb_habilitar_aplicacion.Enabled = false;
+
+        }
+
+        public Aplicaciones2()
         {
             InitializeComponent();
             mostrar_aplicacion();
-            
-        }
-
-        private void Aplicaciones_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmdGuardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
-
-                com = new MySqlCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion) values ('"+ txt_aplicacion.Text +"', '"+ txt_aplicacion_descripcion.Text +"')", con);
-                com.ExecuteNonQuery();
-
-                MessageBox.Show("Datos Ingresados");
-                mostrar_aplicacion();
-                txt_aplicacion.Text = "";
-                txt_aplicacion_descripcion.Text = "";
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex);
-            }
         }
 
         public void mostrar_aplicacion()
@@ -65,19 +45,20 @@ namespace PrototipoSeguridad
             dgv_aplicacion.DataSource = dt;
         }
 
-        private void cmdModificar_Click(object sender, EventArgs e)
+        private void Btn_edit_Click(object sender, EventArgs e)
         {
             try
             {
                 con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
                 con.Open();
 
-                com = new MySqlCommand("update aplicacion set nombre_aplicacion='"+ txt_aplicacion.Text +"', descripcion_aplicacion='"+ txt_aplicacion_descripcion.Text +"' where id_aplicacion="+ Convert.ToInt32(this.var_aplicacion) +" ", con);
+                com = new MySqlCommand("update aplicacion set nombre_aplicacion='" + txt_aplicacion.Text + "', descripcion_aplicacion='" + txt_aplicacion_descripcion.Text + "', id_reporte='" +txt_no_reporte.Text + "'where id_aplicacion=" + Convert.ToInt32(this.var_aplicacion) + " ", con);
                 com.ExecuteNonQuery();
 
                 mostrar_aplicacion();
                 txt_aplicacion.Text = "";
                 txt_aplicacion_descripcion.Text = "";
+                txt_no_reporte.Text = "";
                 MessageBox.Show("Datos actualizados");
             }
             catch (Exception ex)
@@ -87,7 +68,59 @@ namespace PrototipoSeguridad
 
         }
 
-        private void cmdEliminar_Click(object sender, EventArgs e)
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
+                con.Open();
+
+                com = new MySqlCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion,id_reporte) values ('" + txt_aplicacion.Text + "', '" + txt_aplicacion_descripcion.Text + "', '" + txt_no_reporte.Text + "')", con);
+                com.ExecuteNonQuery();
+
+                MessageBox.Show("Datos Ingresados");
+                mostrar_aplicacion();
+                txt_aplicacion.Text = "";
+                txt_aplicacion_descripcion.Text = "";
+                txt_no_reporte.Text = "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+        string var_aplicacion;
+        private void dgv_aplicacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow dgv = dgv_aplicacion.Rows[e.RowIndex];
+
+                this.var_aplicacion = dgv.Cells[0].Value.ToString();
+                txt_aplicacion.Text = dgv.Cells[1].Value.ToString();
+                txt_aplicacion_descripcion.Text = dgv.Cells[2].Value.ToString();
+                txt_no_reporte.Text = dgv.Cells[3].Value.ToString();
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
+        private void Chb_habilitar_aplicacion_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Bloquear();
+        }
+
+        private void Btn_borrar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -110,31 +143,13 @@ namespace PrototipoSeguridad
 
                 txt_aplicacion.Text = "";
                 txt_aplicacion_descripcion.Text = "";
+                txt_no_reporte.Text = "";
                 mostrar_aplicacion();
                 MessageBox.Show("Registro eliminado correctamente");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar, dato no puede ser eliminado");
-            }
-        }
-
-        string var_aplicacion;
-        private void dgv_aplicacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow dgv = dgv_aplicacion.Rows[e.RowIndex];
-
-                this.var_aplicacion = dgv.Cells[0].Value.ToString();
-                txt_aplicacion.Text = dgv.Cells[1].Value.ToString();
-                txt_aplicacion_descripcion.Text = dgv.Cells[2].Value.ToString();
-               
-            }
-            catch (Exception ex)
-
-            {
-                MessageBox.Show("ERROR");
             }
         }
     }
