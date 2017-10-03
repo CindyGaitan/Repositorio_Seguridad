@@ -65,5 +65,13 @@ namespace PrototipoSeguridad
             AsignacionaPerfiles ap = new AsignacionaPerfiles();
             ap.Show();
         }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Close();
+
+        }
     }
 }
