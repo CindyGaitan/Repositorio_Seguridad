@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
+
 namespace PrototipoSeguridad
 {
     public partial class Usuarios : Form
@@ -18,7 +19,7 @@ namespace PrototipoSeguridad
         DataTable dt;
         OdbcDataReader dr;
         Conexion con = new Conexion();
-
+        
         public Usuarios()
         {
             InitializeComponent();
@@ -180,6 +181,105 @@ namespace PrototipoSeguridad
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
             
+        }
+
+        public void txt_usuario_KeyUp(object sender, KeyEventArgs e)
+        {
+            OdbcCommand cmd = con.conexion().CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select u.id_usuario as Num,u.usuario as Usuario, nombre_usuario as Nombre, apellido_usuario as Apellido, u.correo_usuario as Correo, u.telefono_usuario as Telefono from Usuario u where usuario like ('" + txt_usuario.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_usuario.DataSource = dt;
+            dgv_usuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            con.conexion().Close();
+      
+
+        }
+
+        private void txt_usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_pNombre_KeyUp(object sender, KeyEventArgs e)
+        {
+            OdbcCommand cmd = con.conexion().CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select u.id_usuario as Num,u.usuario as Usuario, nombre_usuario as Nombre, apellido_usuario as Apellido, u.correo_usuario as Correo, u.telefono_usuario as Telefono from Usuario u where nombre_usuario like ('" + txt_pNombre.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_usuario.DataSource = dt;
+
+            con.conexion().Close();
+        }
+
+        private void txt_pApellido_KeyUp(object sender, KeyEventArgs e)
+        {
+            OdbcCommand cmd = con.conexion().CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select u.id_usuario as Num,u.usuario as Usuario, nombre_usuario as Nombre, apellido_usuario as Apellido, u.correo_usuario as Correo, u.telefono_usuario as Telefono from Usuario u where apellido_usuario like ('" + txt_pApellido.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_usuario.DataSource = dt;
+
+            con.conexion().Close();
+
+        }
+
+        private void txt_correo_KeyUp(object sender, KeyEventArgs e)
+        {
+            OdbcCommand cmd = con.conexion().CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select u.id_usuario as Num,u.usuario as Usuario, nombre_usuario as Nombre, apellido_usuario as Apellido, u.correo_usuario as Correo, u.telefono_usuario as Telefono from Usuario u where correo_usuario like ('" + txt_correo.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_usuario.DataSource = dt;
+
+            con.conexion().Close();
+        }
+
+        private void txt_telefono_KeyUp(object sender, KeyEventArgs e)
+        {
+            OdbcCommand cmd = con.conexion().CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select u.id_usuario as Num,u.usuario as Usuario, nombre_usuario as Nombre, apellido_usuario as Apellido, u.correo_usuario as Correo, u.telefono_usuario as Telefono from Usuario u where telefono_usuario like ('" + txt_telefono.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_usuario.DataSource = dt;
+
+            con.conexion().Close();
         }
     }
     }

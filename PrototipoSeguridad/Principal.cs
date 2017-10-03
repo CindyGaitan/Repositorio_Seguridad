@@ -68,10 +68,16 @@ namespace PrototipoSeguridad
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login log = new Login();
-            log.Show();
-            this.Close();
-
+            FormCollection formulariosApp = Application.OpenForms;
+            foreach (Form f in formulariosApp)
+            {
+                if (f.Name != "frmLogin")
+                {
+                    f.Hide();
+                }
+            }
+            Login login = new Login();
+            login.Show();
         }
     }
 }

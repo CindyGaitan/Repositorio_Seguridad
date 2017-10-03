@@ -150,7 +150,7 @@
             this.Controls.Add(this.pnl_accion);
             this.Controls.Add(this.gpb_cambio);
             this.Name = "CambioContraseña";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CambioContraseña";
             this.gpb_cambio.ResumeLayout(false);
             this.gpb_cambio.PerformLayout();

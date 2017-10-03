@@ -93,6 +93,8 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(121, 20);
             this.txt_usuario.TabIndex = 33;
+            this.txt_usuario.TextChanged += new System.EventHandler(this.txt_usuario_TextChanged);
+            this.txt_usuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_usuario_KeyUp);
             // 
             // lbl_usuario
             // 
@@ -109,6 +111,7 @@
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(121, 20);
             this.txt_telefono.TabIndex = 31;
+            this.txt_telefono.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_telefono_KeyUp);
             // 
             // txt_correo
             // 
@@ -116,6 +119,7 @@
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(121, 20);
             this.txt_correo.TabIndex = 30;
+            this.txt_correo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_correo_KeyUp);
             // 
             // txt_contraseña
             // 
@@ -158,6 +162,7 @@
             this.txt_pApellido.Name = "txt_pApellido";
             this.txt_pApellido.Size = new System.Drawing.Size(121, 20);
             this.txt_pApellido.TabIndex = 23;
+            this.txt_pApellido.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_pApellido_KeyUp);
             // 
             // txt_pNombre
             // 
@@ -165,6 +170,7 @@
             this.txt_pNombre.Name = "txt_pNombre";
             this.txt_pNombre.Size = new System.Drawing.Size(121, 20);
             this.txt_pNombre.TabIndex = 22;
+            this.txt_pNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_pNombre_KeyUp);
             // 
             // lbl_pApellido
             // 
@@ -285,7 +291,9 @@
             this.Controls.Add(this.gpb_usuario);
             this.Controls.Add(this.dgv_usuario);
             this.Name = "Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).EndInit();
             this.gpb_usuario.ResumeLayout(false);
             this.gpb_usuario.PerformLayout();
