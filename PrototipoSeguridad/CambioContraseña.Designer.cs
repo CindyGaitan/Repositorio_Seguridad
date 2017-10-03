@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambioContraseña));
-            this.gpb_acciones_Usuario = new System.Windows.Forms.GroupBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.gpb_cambio = new System.Windows.Forms.GroupBox();
             this.txt_contraseñaN = new System.Windows.Forms.TextBox();
             this.txt_contraseñaA = new System.Windows.Forms.TextBox();
@@ -38,32 +36,12 @@
             this.lbl_contraseñaN = new System.Windows.Forms.Label();
             this.lbl_contraseñaA = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
-            this.gpb_acciones_Usuario.SuspendLayout();
+            this.Lbl_guardar = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnl_accion = new System.Windows.Forms.Panel();
             this.gpb_cambio.SuspendLayout();
+            this.pnl_accion.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gpb_acciones_Usuario
-            // 
-            this.gpb_acciones_Usuario.Controls.Add(this.btn_guardar);
-            this.gpb_acciones_Usuario.Location = new System.Drawing.Point(439, 74);
-            this.gpb_acciones_Usuario.Name = "gpb_acciones_Usuario";
-            this.gpb_acciones_Usuario.Size = new System.Drawing.Size(235, 158);
-            this.gpb_acciones_Usuario.TabIndex = 9;
-            this.gpb_acciones_Usuario.TabStop = false;
-            this.gpb_acciones_Usuario.Text = "ACCIONES";
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar.Location = new System.Drawing.Point(75, 53);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(89, 49);
-            this.btn_guardar.TabIndex = 2;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // gpb_cambio
             // 
@@ -131,26 +109,57 @@
             this.lbl_usuario.TabIndex = 0;
             this.lbl_usuario.Text = "Usuario";
             // 
+            // Lbl_guardar
+            // 
+            this.Lbl_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_guardar.Location = new System.Drawing.Point(88, 101);
+            this.Lbl_guardar.Name = "Lbl_guardar";
+            this.Lbl_guardar.Size = new System.Drawing.Size(65, 22);
+            this.Lbl_guardar.TabIndex = 12;
+            this.Lbl_guardar.Text = "Guardar";
+            this.Lbl_guardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(88, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnl_accion
+            // 
+            this.pnl_accion.Controls.Add(this.Lbl_guardar);
+            this.pnl_accion.Controls.Add(this.button1);
+            this.pnl_accion.Location = new System.Drawing.Point(439, 82);
+            this.pnl_accion.Name = "pnl_accion";
+            this.pnl_accion.Size = new System.Drawing.Size(235, 150);
+            this.pnl_accion.TabIndex = 11;
+            // 
             // CambioContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(734, 319);
+            this.Controls.Add(this.pnl_accion);
             this.Controls.Add(this.gpb_cambio);
-            this.Controls.Add(this.gpb_acciones_Usuario);
             this.Name = "CambioContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CambioContraseña";
-            this.gpb_acciones_Usuario.ResumeLayout(false);
             this.gpb_cambio.ResumeLayout(false);
             this.gpb_cambio.PerformLayout();
+            this.pnl_accion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gpb_acciones_Usuario;
-        private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.GroupBox gpb_cambio;
         private System.Windows.Forms.TextBox txt_contraseñaN;
         private System.Windows.Forms.TextBox txt_contraseñaA;
@@ -158,5 +167,8 @@
         private System.Windows.Forms.Label lbl_contraseñaN;
         private System.Windows.Forms.Label lbl_contraseñaA;
         private System.Windows.Forms.Label lbl_usuario;
+        private System.Windows.Forms.Label Lbl_guardar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnl_accion;
     }
 }

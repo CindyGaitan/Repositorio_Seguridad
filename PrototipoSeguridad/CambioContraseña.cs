@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 namespace PrototipoSeguridad
 {
     public partial class CambioContraseña : Form
     {
-        MySqlConnection con;
-        MySqlCommand com;
-        MySqlDataAdapter da;
+        OdbcCommand com;
+        OdbcDataAdapter da;
         DataTable dt;
-        MySqlDataReader dr;
+        OdbcDataReader dr;
+        Conexion con = new Conexion();
 
         public CambioContraseña()
         {
@@ -33,10 +33,7 @@ namespace PrototipoSeguridad
         {
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
-
-                com = new MySqlCommand("select concat(nombre_usuario, ' ', apellido_usuario) as usuario from usuario", con);
+                com = new OdbcCommand("select usuario from usuario", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
@@ -52,14 +49,15 @@ namespace PrototipoSeguridad
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
-
                 string id_usuario;
                 int id = 0;
-                com = new MySqlCommand("select id_usuario from usuario where concat(nombre_usuario, ' ', apellido_usuario)='" + cmb_usuario.Text + "' ", con);
+                com = new OdbcCommand("select id_usuario from usuario where usuario='" + cmb_usuario.Text + "' ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
@@ -69,7 +67,7 @@ namespace PrototipoSeguridad
                 dr.Close();
 
                 string contraseña = null;
-                com = new MySqlCommand("select contrasena from usuario where id_usuario =" + id + " ", con);
+                com = new OdbcCommand("select contrasena from usuario where id_usuario =" + id + " ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
@@ -79,7 +77,7 @@ namespace PrototipoSeguridad
 
                 if (txt_contraseñaA.Text == contraseña)
                 {
-                    com = new MySqlCommand("update usuario set contrasena = '" + txt_contraseñaN.Text + "' where id_usuario = " + id + "", con);
+                    com = new OdbcCommand("update usuario set contrasena = '" + txt_contraseñaN.Text + "' where id_usuario = " + id + "", con.conexion());
                     com.ExecuteNonQuery();
                     MessageBox.Show("Contraseña actualizada.");
                 }
@@ -94,7 +92,7 @@ namespace PrototipoSeguridad
             }
             txt_contraseñaA.Text = "";
             txt_contraseñaN.Text = "";
-        }
+    }
     }
     }
 

@@ -44,7 +44,7 @@ namespace PrototipoSeguridad
 
         private void aplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Aplicaciones ap = new Aplicaciones();
+            Aplicaciones2 ap = new Aplicaciones2();
             ap.Show();
         }
 

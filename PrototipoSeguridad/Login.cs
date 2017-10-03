@@ -7,43 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-
+using System.Data.Odbc;
 
 namespace PrototipoSeguridad
 {
     public partial class Login : Form
     {
-        MySqlConnection con;
-        MySqlCommand com;
-        MySqlDataAdapter da;
-        DataTable dt;
-        MySqlDataReader dr;
-
+        OdbcCommand com;
+        OdbcDataReader dr;
+        Conexion con = new Conexion();
+        
         public Login()
         {
-            InitializeComponent();
-            try
+            InitializeComponent();         
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            if (con.comprobacionConexion())
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad; password=");
-                con.Open();
-                MessageBox.Show("conectado");
-                
+                //SI LA CONEXION ES CORRECTA NO HACE NADA, SIGUE CON LA EJECUCION
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("No conectado");
+                MessageBox.Show("Error en Conexion");
             }
         }
 
-       
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
             try
             {
                 string id_usuario;
                 int id = 0;
-                com = new MySqlCommand("select id_usuario from usuario where nombre_usuario='" + txt_usuario.Text + "' and contrasena='"+ txt_contraseña.Text +"' ", con);
+                com = new OdbcCommand("select id_usuario from usuario where usuario='" + txt_usuario.Text + "' and contrasena='" + txt_contraseña.Text + "' ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
@@ -64,14 +61,13 @@ namespace PrototipoSeguridad
                     txt_contraseña.Text = "";
                     MessageBox.Show("Usuario y/o Contraseña incorrecta.");
                 }
-
             }
             catch (Exception ex)
             {
                 txt_usuario.Text = "";
                 txt_contraseña.Text = "";
-                MessageBox.Show("Usuario y/o Contraseña incorrecta.");
+                MessageBox.Show("Usuario y/o Contraseña incorrecta."+ex.ToString());
             }
-        }
+        }    
     }
 }
