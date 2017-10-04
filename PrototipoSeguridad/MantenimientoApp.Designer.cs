@@ -1,4 +1,4 @@
-﻿namespace PrototipoSeguridad
+namespace MantenimientoDerechosApp
 {
     partial class Frm_MantenimientoApp
     {
@@ -71,21 +71,15 @@
             this.Pnl_botones.Controls.Add(this.Btn_primerElemento);
             this.Pnl_botones.Controls.Add(this.Btn_siguiente);
             this.Pnl_botones.Controls.Add(this.Btn_anterior);
-            this.Pnl_botones.Controls.Add(this.Btn_salir);
-            this.Pnl_botones.Controls.Add(this.Btn_cancelar);
-            this.Pnl_botones.Controls.Add(this.Lbl_cancelar);
             this.Pnl_botones.Controls.Add(this.Btn_borrar);
-            this.Pnl_botones.Controls.Add(this.Btn_ingresar);
             this.Pnl_botones.Controls.Add(this.Btn_edit);
-            this.Pnl_botones.Controls.Add(this.Lbl_salir);
             this.Pnl_botones.Controls.Add(this.Lbl_borrar);
-            this.Pnl_botones.Controls.Add(this.Lbl_ingresar);
             this.Pnl_botones.Controls.Add(this.Lbl_editar);
             this.Pnl_botones.Controls.Add(this.Lbl_guardar);
             this.Pnl_botones.Controls.Add(this.Btn_Guardar);
-            this.Pnl_botones.Location = new System.Drawing.Point(28, 26);
+            this.Pnl_botones.Location = new System.Drawing.Point(142, 25);
             this.Pnl_botones.Name = "Pnl_botones";
-            this.Pnl_botones.Size = new System.Drawing.Size(563, 99);
+            this.Pnl_botones.Size = new System.Drawing.Size(342, 94);
             this.Pnl_botones.TabIndex = 0;
             // 
             // Btn_ultimoElemento
@@ -93,7 +87,7 @@
             this.Btn_ultimoElemento.FlatAppearance.BorderSize = 0;
             this.Btn_ultimoElemento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ultimoElemento.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ultimoElemento.Image")));
-            this.Btn_ultimoElemento.Location = new System.Drawing.Point(500, 19);
+            this.Btn_ultimoElemento.Location = new System.Drawing.Point(284, 19);
             this.Btn_ultimoElemento.Name = "Btn_ultimoElemento";
             this.Btn_ultimoElemento.Size = new System.Drawing.Size(55, 32);
             this.Btn_ultimoElemento.TabIndex = 22;
@@ -105,7 +99,7 @@
             this.Btn_primerElemento.FlatAppearance.BorderSize = 0;
             this.Btn_primerElemento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_primerElemento.Image = ((System.Drawing.Image)(resources.GetObject("Btn_primerElemento.Image")));
-            this.Btn_primerElemento.Location = new System.Drawing.Point(439, 19);
+            this.Btn_primerElemento.Location = new System.Drawing.Point(223, 19);
             this.Btn_primerElemento.Name = "Btn_primerElemento";
             this.Btn_primerElemento.Size = new System.Drawing.Size(55, 32);
             this.Btn_primerElemento.TabIndex = 21;
@@ -117,7 +111,7 @@
             this.Btn_siguiente.FlatAppearance.BorderSize = 0;
             this.Btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_siguiente.Image = ((System.Drawing.Image)(resources.GetObject("Btn_siguiente.Image")));
-            this.Btn_siguiente.Location = new System.Drawing.Point(500, 45);
+            this.Btn_siguiente.Location = new System.Drawing.Point(284, 45);
             this.Btn_siguiente.Name = "Btn_siguiente";
             this.Btn_siguiente.Size = new System.Drawing.Size(55, 32);
             this.Btn_siguiente.TabIndex = 20;
@@ -129,7 +123,7 @@
             this.Btn_anterior.FlatAppearance.BorderSize = 0;
             this.Btn_anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_anterior.Image = ((System.Drawing.Image)(resources.GetObject("Btn_anterior.Image")));
-            this.Btn_anterior.Location = new System.Drawing.Point(439, 45);
+            this.Btn_anterior.Location = new System.Drawing.Point(223, 45);
             this.Btn_anterior.Name = "Btn_anterior";
             this.Btn_anterior.Size = new System.Drawing.Size(55, 32);
             this.Btn_anterior.TabIndex = 19;
@@ -141,11 +135,12 @@
             this.Btn_salir.FlatAppearance.BorderSize = 0;
             this.Btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_salir.Image")));
-            this.Btn_salir.Location = new System.Drawing.Point(349, 3);
+            this.Btn_salir.Location = new System.Drawing.Point(553, 284);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(65, 65);
             this.Btn_salir.TabIndex = 18;
             this.Btn_salir.UseVisualStyleBackColor = true;
+            this.Btn_salir.Visible = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
             // Btn_cancelar
@@ -153,30 +148,32 @@
             this.Btn_cancelar.FlatAppearance.BorderSize = 0;
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_cancelar.Image")));
-            this.Btn_cancelar.Location = new System.Drawing.Point(278, 3);
+            this.Btn_cancelar.Location = new System.Drawing.Point(482, 284);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(65, 65);
             this.Btn_cancelar.TabIndex = 15;
             this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.Visible = false;
             this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Lbl_cancelar
             // 
             this.Lbl_cancelar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cancelar.Location = new System.Drawing.Point(278, 71);
+            this.Lbl_cancelar.Location = new System.Drawing.Point(482, 352);
             this.Lbl_cancelar.Name = "Lbl_cancelar";
             this.Lbl_cancelar.Size = new System.Drawing.Size(65, 22);
             this.Lbl_cancelar.TabIndex = 9;
             this.Lbl_cancelar.Text = "Cancelar";
             this.Lbl_cancelar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Lbl_cancelar.Visible = false;
             // 
             // Btn_borrar
             // 
             this.Btn_borrar.FlatAppearance.BorderSize = 0;
             this.Btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_borrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_borrar.Image")));
-            this.Btn_borrar.Location = new System.Drawing.Point(216, 3);
+            this.Btn_borrar.Location = new System.Drawing.Point(143, 3);
             this.Btn_borrar.Name = "Btn_borrar";
             this.Btn_borrar.Size = new System.Drawing.Size(65, 65);
             this.Btn_borrar.TabIndex = 16;
@@ -188,11 +185,12 @@
             this.Btn_ingresar.FlatAppearance.BorderSize = 0;
             this.Btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.Image")));
-            this.Btn_ingresar.Location = new System.Drawing.Point(148, 3);
+            this.Btn_ingresar.Location = new System.Drawing.Point(553, 367);
             this.Btn_ingresar.Name = "Btn_ingresar";
             this.Btn_ingresar.Size = new System.Drawing.Size(65, 65);
             this.Btn_ingresar.TabIndex = 14;
             this.Btn_ingresar.UseVisualStyleBackColor = true;
+            this.Btn_ingresar.Visible = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_edit
@@ -211,18 +209,19 @@
             // 
             this.Lbl_salir.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_salir.Location = new System.Drawing.Point(349, 71);
+            this.Lbl_salir.Location = new System.Drawing.Point(553, 352);
             this.Lbl_salir.Name = "Lbl_salir";
             this.Lbl_salir.Size = new System.Drawing.Size(65, 22);
             this.Lbl_salir.TabIndex = 12;
             this.Lbl_salir.Text = "Salir";
             this.Lbl_salir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Lbl_salir.Visible = false;
             // 
             // Lbl_borrar
             // 
             this.Lbl_borrar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_borrar.Location = new System.Drawing.Point(216, 71);
+            this.Lbl_borrar.Location = new System.Drawing.Point(143, 71);
             this.Lbl_borrar.Name = "Lbl_borrar";
             this.Lbl_borrar.Size = new System.Drawing.Size(65, 22);
             this.Lbl_borrar.TabIndex = 10;
@@ -233,12 +232,13 @@
             // 
             this.Lbl_ingresar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_ingresar.Location = new System.Drawing.Point(145, 71);
+            this.Lbl_ingresar.Location = new System.Drawing.Point(550, 435);
             this.Lbl_ingresar.Name = "Lbl_ingresar";
             this.Lbl_ingresar.Size = new System.Drawing.Size(65, 22);
             this.Lbl_ingresar.TabIndex = 8;
             this.Lbl_ingresar.Text = "Ingresar";
             this.Lbl_ingresar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Lbl_ingresar.Visible = false;
             // 
             // Lbl_editar
             // 
@@ -429,10 +429,16 @@
             this.Controls.Add(this.Cmb_aplicacion);
             this.Controls.Add(this.Pnl_derechos);
             this.Controls.Add(this.Txt_aplicacion);
+            this.Controls.Add(this.Btn_salir);
+            this.Controls.Add(this.Btn_cancelar);
             this.Controls.Add(this.Txt_user);
+            this.Controls.Add(this.Lbl_cancelar);
             this.Controls.Add(this.Lbl_aplicacion);
             this.Controls.Add(this.Lbl_usuario);
             this.Controls.Add(this.Pnl_botones);
+            this.Controls.Add(this.Lbl_salir);
+            this.Controls.Add(this.Btn_ingresar);
+            this.Controls.Add(this.Lbl_ingresar);
             this.Name = "Frm_MantenimientoApp";
             this.Text = "Mantenimiento Derechos Aplicaciones de Usuarios";
             this.Load += new System.EventHandler(this.Frm_MantenimientoApp_Load);
