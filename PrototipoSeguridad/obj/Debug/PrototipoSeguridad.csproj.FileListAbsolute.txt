@@ -94,6 +94,7 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguri
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.pdb
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\bin\Debug\MySql.Data.dll
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\bin\Debug\MySql.Data.xml
+<<<<<<< HEAD
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe.config
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.exe
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.pdb
@@ -134,3 +135,23 @@ C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\bin\Debug\stdole.dll
 C:\Users\Carlos Reyes\Desktop\Seguridad\Seguridad2\Repositorio_Seguridad-master\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteBitacora.resources
+=======
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csprojResolveAssemblyReference.cache
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Aplicaciones2.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.AsignacionaPerfiles.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Bitacora.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.CambioContraseña.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Login.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Frm_MantenimientoApp.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Perfiles.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.PerfilUsuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Principal.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Properties.Resources.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.exe
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\PrototipoSeguridad.pdb
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\MySql.Data.dll
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\bin\Debug\MySql.Data.xml
+>>>>>>> 66b6424072a01b3b8078e5182febb0a474c55c8c
