@@ -150,43 +150,25 @@ namespace PrototipoSeguridad
 
         private void button7_Click(object sender, EventArgs e)
         {
-            int selectedIndex = comboBox1.SelectedIndex;
-
-            for (int counter = 0; counter < (dataGridView2.Rows.Count) - 1;
-         counter++)
-            {
-                try
-            {
-                //This is my connection string i have assigned the database file address path  
-                
-                //This is my insert query in which i am taking input from the user through windows forms  
-                string Query = "insert into bd_seguridad.detalle_perfil_aplicacion(id_perfil,id_aplicacion) values('" + selectedIndex.ToString() + "','"  +Convert.ToString(dataGridView2[0, counter].Value) + "');";
-                //This is  MySqlConnection here i have created the object and pass my connection string.  
-               OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
-                //This is command class which will handle the query and connection object.  
-                OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
-                OdbcDataReader MyReader2;
-                MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                MessageBox.Show("Save Data");
-                while (MyReader2.Read())
-                {
-                }
-                MyConn2.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                }
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int selectedIndex = comboBox1.SelectedIndex;
+            
+
+        }
+
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Btn_borrar_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = comboBox1.SelectedIndex+1;
             try
             {
-                 string Query = "delete from  bd_seguridad.detalle_perfil_aplicacion where id_perfil='" + selectedIndex.ToString() + "';";
+                string Query = "delete from  bd_seguridad.detalle_perfil_aplicacion where id_perfil='" + selectedIndex.ToString() + "';";
                 OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
                 OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
                 OdbcDataReader MyReader2;
@@ -202,6 +184,45 @@ namespace PrototipoSeguridad
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Btn_edit_Click(object sender, EventArgs e)
+        {
+
+            int selectedIndex = comboBox1.SelectedIndex+1;
+
+            for (int counter = 0; counter < (dataGridView2.Rows.Count) - 1;
+         counter++)
+            {
+                try
+                {
+                    //This is my connection string i have assigned the database file address path  
+
+                    //This is my insert query in which i am taking input from the user through windows forms  
+                    string Query = "insert into bd_seguridad.detalle_perfil_aplicacion(id_perfil,id_aplicacion) values('" + selectedIndex.ToString() + "','" + Convert.ToString(dataGridView2[0, counter].Value) + "');";
+                    //This is  MySqlConnection here i have created the object and pass my connection string.  
+                    OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
+                    //This is command class which will handle the query and connection object.  
+                    OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
+                    OdbcDataReader MyReader2;
+                    MyConn2.Open();
+                    MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                    MessageBox.Show("Save Data");
+                    while (MyReader2.Read())
+                    {
+                    }
+                    MyConn2.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

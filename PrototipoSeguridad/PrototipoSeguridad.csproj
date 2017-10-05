@@ -120,11 +120,11 @@
     <Compile Include="Perfiles.designer.cs">
       <DependentUpon>Perfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerfilUsuario.cs">
+    <Compile Include="PerfilesUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PerfilUsuario.designer.cs">
-      <DependentUpon>PerfilUsuario.cs</DependentUpon>
+    <Compile Include="PerfilesUsuario.designer.cs">
+      <DependentUpon>PerfilesUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="Perfiles.resx">
       <DependentUpon>Perfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PerfilUsuario.resx">
-      <DependentUpon>PerfilUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="PerfilesUsuario.resx">
+      <DependentUpon>PerfilesUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -250,6 +250,30 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22236267_1723360744365318_2094413666_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264602_1723360754365317_1757528147_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264596_1723360747698651_173196365_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264625_1723360751031984_1344209642_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264602_1723360754365317_1757528147_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22236267_1723360744365318_2094413666_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264625_1723360751031984_1344209642_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22264596_1723360747698651_173196365_n1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
