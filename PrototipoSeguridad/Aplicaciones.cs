@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 namespace PrototipoSeguridad
 {
     public partial class Aplicaciones2 : Form
     {
-        MySqlConnection con;
-        MySqlCommand com, com2;
-        MySqlDataAdapter da;
+        OdbcConnection conn = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ");
+        Conexion con = new Conexion();
+        OdbcCommand com, com2;
+        OdbcDataAdapter da;
         DataTable dt;
-        MySqlDataReader dr;
+        OdbcDataReader dr;
 
         public void Bloquear()
         {
@@ -36,10 +38,9 @@ namespace PrototipoSeguridad
 
         public void mostrar_aplicacion()
         {
-            con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-            con.Open();
 
-            da = new MySqlDataAdapter("select *from aplicacion", con);
+
+            da = new OdbcDataAdapter("select *from aplicacion", con.conexion());
             dt = new DataTable();
             da.Fill(dt);
             dgv_aplicacion.DataSource = dt;
@@ -49,10 +50,9 @@ namespace PrototipoSeguridad
         {
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
 
-                com = new MySqlCommand("update aplicacion set nombre_aplicacion='" + txt_aplicacion.Text + "', descripcion_aplicacion='" + txt_aplicacion_descripcion.Text + "', id_reporte='" +txt_no_reporte.Text + "'where id_aplicacion=" + Convert.ToInt32(this.var_aplicacion) + " ", con);
+
+                com = new OdbcCommand("update aplicacion set nombre_aplicacion='" + txt_aplicacion.Text + "', descripcion_aplicacion='" + txt_aplicacion_descripcion.Text + "', id_reporte='" + txt_no_reporte.Text + "'where id_aplicacion=" + Convert.ToInt32(this.var_aplicacion) + " ", con.conexion());
                 com.ExecuteNonQuery();
 
                 mostrar_aplicacion();
@@ -72,10 +72,9 @@ namespace PrototipoSeguridad
         {
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
 
-                com = new MySqlCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion,id_reporte) values ('" + txt_aplicacion.Text + "', '" + txt_aplicacion_descripcion.Text + "', '" + txt_no_reporte.Text + "')", con);
+
+                com = new OdbcCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion,id_reporte) values ('" + txt_aplicacion.Text + "', '" + txt_aplicacion_descripcion.Text + "', '" + txt_no_reporte.Text + "')", con.conexion());
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Datos Ingresados");
@@ -120,16 +119,90 @@ namespace PrototipoSeguridad
             Bloquear();
         }
 
+        private void txt_aplicacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_aplicacion_KeyUp(object sender, KeyEventArgs e)
+        {
+            conn.Open();
+            OdbcCommand cmd = conn.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM aplicacion where nombre_aplicacion like ('" + txt_aplicacion.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_aplicacion.DataSource = dt;
+
+            conn.Close();
+        }
+
+        private void txt_aplicacion_descripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_aplicacion_descripcion_KeyUp(object sender, KeyEventArgs e)
+        {
+            conn.Open();
+            OdbcCommand cmd = conn.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM aplicacion where descripcion_aplicacion like ('" + txt_aplicacion_descripcion.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_aplicacion.DataSource = dt;
+
+            conn.Close();
+
+        }
+
+        private void txt_no_reporte_KeyUp(object sender, KeyEventArgs e)
+        {
+            conn.Open();
+            OdbcCommand cmd = conn.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM aplicacion where id_reporte like ('" + txt_no_reporte.Text + "%')";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
+
+            da.Fill(dt);
+            dgv_aplicacion.DataSource = dt;
+
+            conn.Close();
+        }
+
+        private void Pnl_botones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
             try
             {
-                con = new MySqlConnection("server = localhost; user id = root; database = BD_seguridad");
-                con.Open();
+
 
                 string id_aplicacion;
                 int id = 0;
-                com = new MySqlCommand("select id_aplicacion from aplicacion where nombre_aplicacion='" + txt_aplicacion.Text + "' ", con);
+                com = new OdbcCommand("select id_aplicacion from aplicacion where nombre_aplicacion='" + txt_aplicacion.Text + "' ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
@@ -138,7 +211,7 @@ namespace PrototipoSeguridad
                 }
                 dr.Close();
 
-                com = new MySqlCommand("delete from aplicacion where id_aplicacion=" + id + " ", con);
+                com = new OdbcCommand("delete from aplicacion where id_aplicacion=" + id + " ", con.conexion());
                 com.ExecuteNonQuery();
 
                 txt_aplicacion.Text = "";

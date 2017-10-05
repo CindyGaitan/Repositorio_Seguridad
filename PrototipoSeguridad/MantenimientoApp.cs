@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace PrototipoSeguridad
 {
-    public partial class Frm_MantenimientoApp : Form
+     partial class Frm_MantenimientoApp : Form
     {
 
         public Frm_MantenimientoApp()
@@ -383,6 +383,11 @@ namespace PrototipoSeguridad
             edit = 0;
             store = 0;
             bloqueados();
+        }
+
+        private void Txt_user_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         public void boton_ingresar() {

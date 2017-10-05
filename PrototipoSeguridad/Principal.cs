@@ -79,5 +79,11 @@ namespace PrototipoSeguridad
             Login login = new Login();
             login.Show();
         }
+
+        private void reportesDeBitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteBitacora repb = new ReporteBitacora();
+            repb.Show();
+        }
     }
 }
