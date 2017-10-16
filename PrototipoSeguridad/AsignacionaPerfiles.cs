@@ -68,8 +68,8 @@ namespace PrototipoSeguridad
                 da1.Fill(dt);
 
 
-                comboBox1.ValueMember = "id_perfil";
-                comboBox1.DisplayMember = "id_perfil";
+                comboBox1.ValueMember = "nombre_perfil";
+                comboBox1.DisplayMember = "nombre_perfil";
                
                 comboBox1.DataSource = dt;
             }
@@ -89,7 +89,7 @@ namespace PrototipoSeguridad
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            int selectedIndex = comboBox1.SelectedIndex;
+           /* int selectedIndex = comboBox1.SelectedIndex;
 
 
 
@@ -110,7 +110,7 @@ namespace PrototipoSeguridad
                 textBox1.Text = dr["nombre_perfil"].ToString();
                 
 
-            }
+            }*/
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace PrototipoSeguridad
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
-            int selectedIndex = comboBox1.SelectedIndex+1;
+            int selectedIndex = comboBox1.SelectedIndex;
             try
             {
                 string Query = "delete from  bd_seguridad.detalle_perfil_aplicacion where id_perfil='" + selectedIndex.ToString() + "';";
@@ -204,7 +204,7 @@ namespace PrototipoSeguridad
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            int selectedIndex = comboBox1.SelectedIndex + 1;
+            int selectedIndex = comboBox1.SelectedIndex ;
 
             for (int counter = 0; counter < (dataGridView2.Rows.Count) - 1;
          counter++)
