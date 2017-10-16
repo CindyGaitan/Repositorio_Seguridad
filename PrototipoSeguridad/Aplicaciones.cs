@@ -50,15 +50,26 @@ namespace PrototipoSeguridad
         {
             try
             {
+                
+                if (Chb_habilitar_aplicacion.Checked)
+                {
+                    txt_habilitar.Text = "1";
+                    
+                }
+                else
+                {
+                    txt_habilitar.Text = "0";
+                }
 
 
-                com = new OdbcCommand("update aplicacion set nombre_aplicacion='" + txt_aplicacion.Text + "', descripcion_aplicacion='" + txt_aplicacion_descripcion.Text + "', id_reporte='" + txt_no_reporte.Text + "'where id_aplicacion=" + Convert.ToInt32(this.var_aplicacion) + " ", con.conexion());
+                com = new OdbcCommand("update aplicacion set nombre_aplicacion='" + txt_aplicacion.Text + "', descripcion_aplicacion='" + txt_aplicacion_descripcion.Text + "' , habilitar_aplicacion='" + txt_habilitar.Text + "', id_reporte='" + txt_no_reporte.Text + "'where id_aplicacion=" + Convert.ToInt32(this.var_aplicacion) + " ", con.conexion());
                 com.ExecuteNonQuery();
 
                 mostrar_aplicacion();
                 txt_aplicacion.Text = "";
                 txt_aplicacion_descripcion.Text = "";
                 txt_no_reporte.Text = "";
+                txt_habilitar.Text = "";
                 MessageBox.Show("Datos actualizados");
             }
             catch (Exception ex)
@@ -72,9 +83,17 @@ namespace PrototipoSeguridad
         {
             try
             {
+                if (Chb_habilitar_aplicacion.Checked)
+                {
+                    txt_habilitar.Text = "1";
 
+                }
+                else
+                {
+                    txt_habilitar.Text = "0";
+                }
 
-                com = new OdbcCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion,id_reporte) values ('" + txt_aplicacion.Text + "', '" + txt_aplicacion_descripcion.Text + "', '" + txt_no_reporte.Text + "')", con.conexion());
+                com = new OdbcCommand("insert into aplicacion (nombre_aplicacion, descripcion_aplicacion, habilitar_aplicacion, id_reporte) values ('" + txt_aplicacion.Text + "', '" + txt_aplicacion_descripcion.Text + "', '" + txt_habilitar.Text + "', '" + txt_no_reporte.Text + "')", con.conexion());
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Datos Ingresados");
@@ -99,7 +118,8 @@ namespace PrototipoSeguridad
                 this.var_aplicacion = dgv.Cells[0].Value.ToString();
                 txt_aplicacion.Text = dgv.Cells[1].Value.ToString();
                 txt_aplicacion_descripcion.Text = dgv.Cells[2].Value.ToString();
-                txt_no_reporte.Text = dgv.Cells[3].Value.ToString();
+                txt_habilitar.Text = dgv.Cells[3].Value.ToString();
+                txt_no_reporte.Text = dgv.Cells[4].Value.ToString();
 
             }
             catch (Exception ex)
@@ -216,6 +236,7 @@ namespace PrototipoSeguridad
 
                 txt_aplicacion.Text = "";
                 txt_aplicacion_descripcion.Text = "";
+                txt_habilitar.Text = "";
                 txt_no_reporte.Text = "";
                 mostrar_aplicacion();
                 MessageBox.Show("Registro eliminado correctamente");
