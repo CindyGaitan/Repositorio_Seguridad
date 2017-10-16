@@ -28,6 +28,8 @@ namespace PrototipoSeguridad
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.dataGridView2.Columns[0].Visible = false;
+            
             try
             {
                
@@ -79,6 +81,9 @@ namespace PrototipoSeguridad
             {
                 conector.Close();
             }
+            this.dataGridView1.Columns[0].Visible = false;
+            this.dataGridView1.Columns[3].Visible = false;
+            this.dataGridView1.Columns[4].Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -159,10 +164,6 @@ namespace PrototipoSeguridad
 
         }
 
-        private void Btn_Guardar_Click(object sender, EventArgs e)
-        {
-        }
-
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
             int selectedIndex = comboBox1.SelectedIndex+1;
@@ -188,8 +189,22 @@ namespace PrototipoSeguridad
 
         private void Btn_edit_Click(object sender, EventArgs e)
         {
+            Frm_MantenimientoApp maplicaciones = new Frm_MantenimientoApp();
+            //Principal fa = new Principal();
+            //maplicaciones.MdiParent = fa;
+            maplicaciones.Show();
 
-            int selectedIndex = comboBox1.SelectedIndex+1;
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = comboBox1.SelectedIndex + 1;
 
             for (int counter = 0; counter < (dataGridView2.Rows.Count) - 1;
          counter++)
@@ -218,11 +233,6 @@ namespace PrototipoSeguridad
                     MessageBox.Show(ex.Message);
                 }
             }
-
-        }
-
-        private void label6_Click_1(object sender, EventArgs e)
-        {
 
         }
     }

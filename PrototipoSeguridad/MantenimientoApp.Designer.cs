@@ -440,6 +440,7 @@ namespace PrototipoSeguridad
             this.Controls.Add(this.Btn_ingresar);
             this.Controls.Add(this.Lbl_ingresar);
             this.Name = "Frm_MantenimientoApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Derechos Aplicaciones de Usuarios";
             this.Load += new System.EventHandler(this.Frm_MantenimientoApp_Load);
             this.Pnl_botones.ResumeLayout(false);

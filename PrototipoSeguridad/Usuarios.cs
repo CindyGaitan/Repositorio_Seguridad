@@ -109,7 +109,7 @@ namespace PrototipoSeguridad
 
                 if (id == 0)
                 {
-                    com = new OdbcCommand("insert into usuario (usuario,nombre_usuario, apellido_usuario, contrasena, correo_usuario, telefono_usuario) values ('" + txt_usuario.Text + "','" + txt_pNombre.Text + "', '" + txt_pApellido.Text + "', '" + txt_contraseña.Text + "', '" + txt_correo.Text + "', " + Convert.ToInt32(txt_telefono.Text) + ")", con.conexion());
+                    com = new OdbcCommand("insert into usuario (usuario,nombre_usuario, apellido_usuario, contrasena, correo_usuario, telefono_usuario) values ('" + txt_usuario.Text + "','" + txt_pNombre.Text + "', '" + txt_pApellido.Text + "', AES_ENCRYPT( '" + txt_contraseña.Text + "','password'), '" + txt_correo.Text + "', " + Convert.ToInt32(txt_telefono.Text) + ")", con.conexion());
                     com.ExecuteNonQuery();
                     mostrar_usuario();
                     txt_usuario.Text = ""; txt_contraseña.Text = ""; txt_pNombre.Text = ""; txt_pApellido.Text = ""; txt_correo.Text = ""; txt_telefono.Text = "";

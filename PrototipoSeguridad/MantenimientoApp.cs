@@ -27,7 +27,7 @@ namespace PrototipoSeguridad
             //contar_userapp();
         }
 
-        MySqlConnection cn = new MySqlConnection("datasource = localhost; database=BD_seguridad;username=root;password=");
+        MySqlConnection cn = new MySqlConnection("datasource = localhost; database=BD_seguridad;username=root;password=1234");
         int auxG = 1;
         int num, act, first, last;
         int I, M, Im, C, E, us;

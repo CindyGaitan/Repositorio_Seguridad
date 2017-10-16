@@ -210,3 +210,21 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguri
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporte_Idbitacora.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.GenerarReporte.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.GenerarReporteUsuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.GenerarReporte.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.GenerarReporteUsuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidaccion.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidaplicacion.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidbitacora.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteiderror.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidfecha.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidip.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidrangos.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidresultado.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteidusuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idapellido.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idcorreo.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idnombre.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idnusuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idtel.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporteusuario_idusuario.resources
+C:\Users\werne\Documents\Github\Seguridad\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporte_Idbitacora.resources

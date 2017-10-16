@@ -40,7 +40,7 @@ namespace PrototipoSeguridad
             {
                 string id_usuario;
                 int id = 0;
-                com = new OdbcCommand("select id_usuario from usuario where usuario='" + txt_usuario.Text + "' and contrasena='" + txt_contraseña.Text + "' ", con.conexion());
+                com = new OdbcCommand("select id_usuario from usuario where usuario='" + txt_usuario.Text + "' and AES_DECRYPT(contrasena,'password')='" + txt_contraseña.Text + "' ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
