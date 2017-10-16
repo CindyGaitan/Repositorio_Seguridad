@@ -91,8 +91,21 @@ namespace PrototipoSeguridad
 
         private void reportesDeBitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteBitacora repb = new ReporteBitacora();
+            //ReporteBitacora repb = new ReporteBitacora();
+            //repb.Show();
+        }
+
+        private void generarReporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerarReporte repb = new GenerarReporte();
             repb.Show();
+        }
+
+        private void reportesDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerarReporteUsuario repb = new GenerarReporteUsuario();
+            repb.Show();
+
         }
     }
 }
