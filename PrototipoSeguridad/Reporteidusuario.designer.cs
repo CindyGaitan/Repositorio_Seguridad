@@ -1,6 +1,6 @@
 ﻿namespace PrototipoSeguridad
 {
-    partial class ReporteBitacora
+    partial class Reporteidusuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,47 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_reporte_bitacora = new System.Windows.Forms.Button();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.reporteusuario1 = new PrototipoSeguridad.reporteusuario();
             this.SuspendLayout();
-            // 
-            // btn_reporte_bitacora
-            // 
-            this.btn_reporte_bitacora.Location = new System.Drawing.Point(1341, 740);
-            this.btn_reporte_bitacora.Name = "btn_reporte_bitacora";
-            this.btn_reporte_bitacora.Size = new System.Drawing.Size(75, 23);
-            this.btn_reporte_bitacora.TabIndex = 0;
-            this.btn_reporte_bitacora.Text = "Reporte";
-            this.btn_reporte_bitacora.UseVisualStyleBackColor = true;
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1395, 722);
-            this.crystalReportViewer1.TabIndex = 1;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            this.crystalReportViewer1.ReportSource = this.reporteusuario1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(868, 509);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
-            // ReporteBitacora
+            // Reporteidusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 775);
+            this.ClientSize = new System.Drawing.Size(868, 509);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Controls.Add(this.btn_reporte_bitacora);
-            this.Name = "ReporteBitacora";
-            this.Text = "ReporteBitacora";
-            this.Load += new System.EventHandler(this.ReporteBitacora_Load);
+            this.Name = "Reporteidusuario";
+            this.Text = "Reporteidusuario";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_reporte_bitacora;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private reporteusuario reporteusuario1;
     }
 }

@@ -16,14 +16,14 @@ namespace PrototipoSeguridad {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportBitacora : ReportClass {
+    public class Reporterangos : ReportClass {
         
-        public CrystalReportBitacora() {
+        public Reporterangos() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportBitacora.rpt";
+                return "Reporterangos.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PrototipoSeguridad {
         
         public override string FullResourceName {
             get {
-                return "PrototipoSeguridad.CrystalReportBitacora.rpt";
+                return "PrototipoSeguridad.Reporterangos.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace PrototipoSeguridad {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id_usuario {
+        public CrystalDecisions.Shared.IParameterField Parameter_Fecha_inicial {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,25 +98,17 @@ namespace PrototipoSeguridad {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id_bitacora {
+        public CrystalDecisions.Shared.IParameterField Parameter_Fecha_final {
             get {
                 return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Fecha {
-            get {
-                return this.DataDefinition.ParameterFields[2];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportBitacora : Component, ICachedReport {
+    public class CachedReporterangos : Component, ICachedReport {
         
-        public CachedCrystalReportBitacora() {
+        public CachedReporterangos() {
         }
         
         [Browsable(false)]
@@ -153,7 +145,7 @@ namespace PrototipoSeguridad {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportBitacora rpt = new CrystalReportBitacora();
+            Reporterangos rpt = new Reporterangos();
             rpt.Site = this.Site;
             return rpt;
         }

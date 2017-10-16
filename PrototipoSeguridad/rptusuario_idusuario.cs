@@ -16,14 +16,14 @@ namespace PrototipoSeguridad {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportBitacora : ReportClass {
+    public class rptusuario_idusuario : ReportClass {
         
-        public CrystalReportBitacora() {
+        public rptusuario_idusuario() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportBitacora.rpt";
+                return "rptusuario_idusuario.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PrototipoSeguridad {
         
         public override string FullResourceName {
             get {
-                return "PrototipoSeguridad.CrystalReportBitacora.rpt";
+                return "PrototipoSeguridad.rptusuario_idusuario.rpt";
             }
             set {
                 // Do nothing
@@ -95,28 +95,12 @@ namespace PrototipoSeguridad {
                 return this.DataDefinition.ParameterFields[0];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id_bitacora {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Fecha {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportBitacora : Component, ICachedReport {
+    public class Cachedrptusuario_idusuario : Component, ICachedReport {
         
-        public CachedCrystalReportBitacora() {
+        public Cachedrptusuario_idusuario() {
         }
         
         [Browsable(false)]
@@ -153,7 +137,7 @@ namespace PrototipoSeguridad {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportBitacora rpt = new CrystalReportBitacora();
+            rptusuario_idusuario rpt = new rptusuario_idusuario();
             rpt.Site = this.Site;
             return rpt;
         }

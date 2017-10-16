@@ -7,29 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CrystalDecisions.CrystalReports.Engine;
 
 namespace PrototipoSeguridad
 {
-    public partial class ReporteBitacora : Form
+    public partial class Reporte_Idbitacora : Form
     {
-        public ReporteBitacora()
+        public Reporte_Idbitacora()
         {
             InitializeComponent();
 
-        }
-
-        private void ReporteBitacora_Load(object sender, EventArgs e)
-        {
-            CrystalReportBitacora crp = new CrystalReportBitacora();
-
-            crystalReportViewer1.ReportSource = crp;
 
         }
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
+            CrystalReportBitacora crp = new CrystalReportBitacora();
 
+            crystalReportViewer1.ReportSource = crp;
         }
     }
 }

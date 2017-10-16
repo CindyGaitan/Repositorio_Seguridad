@@ -16,14 +16,14 @@ namespace PrototipoSeguridad {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportBitacora : ReportClass {
+    public class rptusuario_apellido : ReportClass {
         
-        public CrystalReportBitacora() {
+        public rptusuario_apellido() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportBitacora.rpt";
+                return "rptusuario_apellido.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PrototipoSeguridad {
         
         public override string FullResourceName {
             get {
-                return "PrototipoSeguridad.CrystalReportBitacora.rpt";
+                return "PrototipoSeguridad.rptusuario_apellido.rpt";
             }
             set {
                 // Do nothing
@@ -90,33 +90,17 @@ namespace PrototipoSeguridad {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id_usuario {
+        public CrystalDecisions.Shared.IParameterField Parameter_Apellido_ {
             get {
                 return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id_bitacora {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Fecha {
-            get {
-                return this.DataDefinition.ParameterFields[2];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportBitacora : Component, ICachedReport {
+    public class Cachedrptusuario_apellido : Component, ICachedReport {
         
-        public CachedCrystalReportBitacora() {
+        public Cachedrptusuario_apellido() {
         }
         
         [Browsable(false)]
@@ -153,7 +137,7 @@ namespace PrototipoSeguridad {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportBitacora rpt = new CrystalReportBitacora();
+            rptusuario_apellido rpt = new rptusuario_apellido();
             rpt.Site = this.Site;
             return rpt;
         }

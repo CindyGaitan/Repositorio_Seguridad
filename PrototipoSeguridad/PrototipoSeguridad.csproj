@@ -134,11 +134,203 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporteaccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporteaccion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporteaplicacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporteaplicacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteBitacora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReporteBitacora.Designer.cs">
       <DependentUpon>ReporteBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteerror.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporteerror.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportefecha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reportefecha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporteidaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidaccion.designer.cs">
+      <DependentUpon>Reporteidaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidaplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidaplicacion.designer.cs">
+      <DependentUpon>Reporteidaplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidbitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidbitacora.designer.cs">
+      <DependentUpon>Reporteidbitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteiderror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteiderror.designer.cs">
+      <DependentUpon>Reporteiderror.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidfecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidfecha.designer.cs">
+      <DependentUpon>Reporteidfecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidip.designer.cs">
+      <DependentUpon>Reporteidip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidrangos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidrangos.designer.cs">
+      <DependentUpon>Reporteidrangos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidresultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidresultado.designer.cs">
+      <DependentUpon>Reporteidresultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteidusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteidusuario.designer.cs">
+      <DependentUpon>Reporteidusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteip.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporteip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporterangos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporterangos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporteresultado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporteresultado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporteusuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteusuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idapellido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idapellido.designer.cs">
+      <DependentUpon>Reporteusuario_idapellido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteusuario_idcorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idcorreo.designer.cs">
+      <DependentUpon>Reporteusuario_idcorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteusuario_idnombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idnombre.designer.cs">
+      <DependentUpon>Reporteusuario_idnombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteusuario_idnusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idnusuario.designer.cs">
+      <DependentUpon>Reporteusuario_idnusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteusuario_idtel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idtel.designer.cs">
+      <DependentUpon>Reporteusuario_idtel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteusuario_idusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteusuario_idusuario.designer.cs">
+      <DependentUpon>Reporteusuario_idusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Idbitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Idbitacora.designer.cs">
+      <DependentUpon>Reporte_Idbitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptidbitacora.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptidbitacora.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPersonal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPersonal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_apellido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_apellido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_correo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_correo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_idusuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_idusuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_nombre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_nombre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_nusuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_nusuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptusuario_tel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptusuario_tel.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -187,8 +379,120 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporteaccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporteaccion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteaplicacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporteaplicacion.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteBitacora.resx">
       <DependentUpon>ReporteBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteerror.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporteerror.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportefecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reportefecha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidaccion.resx">
+      <DependentUpon>Reporteidaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidaplicacion.resx">
+      <DependentUpon>Reporteidaplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidbitacora.resx">
+      <DependentUpon>Reporteidbitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteiderror.resx">
+      <DependentUpon>Reporteiderror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidfecha.resx">
+      <DependentUpon>Reporteidfecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidip.resx">
+      <DependentUpon>Reporteidip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidrangos.resx">
+      <DependentUpon>Reporteidrangos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidresultado.resx">
+      <DependentUpon>Reporteidresultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteidusuario.resx">
+      <DependentUpon>Reporteidusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporteip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporterangos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporterangos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteresultado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporteresultado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteusuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteusuario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idapellido.resx">
+      <DependentUpon>Reporteusuario_idapellido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idcorreo.resx">
+      <DependentUpon>Reporteusuario_idcorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idnombre.resx">
+      <DependentUpon>Reporteusuario_idnombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idnusuario.resx">
+      <DependentUpon>Reporteusuario_idnusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idtel.resx">
+      <DependentUpon>Reporteusuario_idtel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteusuario_idusuario.resx">
+      <DependentUpon>Reporteusuario_idusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Idbitacora.resx">
+      <DependentUpon>Reporte_Idbitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptidbitacora.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptidbitacora.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPersonal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPersonal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_apellido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_apellido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_correo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_correo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_idusuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_idusuario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_nombre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_nombre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_nusuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_nusuario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptusuario_tel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptusuario_tel.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
