@@ -36,25 +36,6 @@ namespace MantenimientoDerechosApp
             this.Hide();
         }
         
-        public void obtenerIP()
-        {
-            IPHostEntry host;
-
-            host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (IPAddress ip in host.AddressList)
-            {
-                if (ip.AddressFamily.ToString() == "InterNetwork")
-                {
-                    localIP = ip.ToString();
-                }
-            }
-            MessageBox.Show(localIP);
-        }
-
-        public static String s_error;
-        public static String stringpad = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ";
-        bitacora_dll.bitacora_dll connection = new bitacora_dll.bitacora_dll(stringpad);
-        private string localIP;
 
         private void Frm_MantenimientoApp_Load(object sender, EventArgs e)
         {
