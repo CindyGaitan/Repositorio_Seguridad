@@ -55,7 +55,7 @@ namespace PrototipoSeguridad
         {
             try
             {
-                string id_usuario;
+                string id_usuario;              
                 int id = 0;
                 com = new OdbcCommand("select id_usuario from usuario where usuario='" + cmb_usuario.Text + "' ", con.conexion());
                 dr = com.ExecuteReader();
@@ -66,32 +66,37 @@ namespace PrototipoSeguridad
                 }
                 dr.Close();
 
-                string contraseña = null;
-                com = new OdbcCommand("select contrasena from usuario where id_usuario =" + id + " ", con.conexion());
+                string contraseña = null; 
+                com = new OdbcCommand("select id_usuario from usuario where id_usuario =" + id + " and  AES_DECRYPT(contrasena,'password')='"+ txt_contraseñaA.Text +"' ", con.conexion());
                 dr = com.ExecuteReader();
                 while (dr.Read())
                 {
-                    contraseña = dr["contrasena"].ToString();
+                    contraseña = dr["id_usuario"].ToString();
                 }
                 dr.Close();
 
-                if (txt_contraseñaA.Text == contraseña)
+                if (contraseña != null && txt_confirmacion.Text == txt_contraseñaN.Text)
                 {
-                    com = new OdbcCommand("update usuario set contrasena = '" + txt_contraseñaN.Text + "' where id_usuario = " + id + "", con.conexion());
+                    com = new OdbcCommand("update usuario set contrasena = AES_ENCRYPT('" + txt_contraseñaN.Text + "', 'password') where id_usuario = " + id + "", con.conexion());
                     com.ExecuteNonQuery();
                     MessageBox.Show("Contraseña actualizada.");
                 }
+                else if (txt_confirmacion.Text != txt_contraseñaN.Text)
+                {
+                    MessageBox.Show("Nueva Contraseña no coincide con la Confirmación, Verificar.");
+                }
                 else
                 {
-                    MessageBox.Show("Contraseña actual no corresponde");
+                    MessageBox.Show("Contraseña actual no corresponde "+contraseña);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Error" + ex );
             }
             txt_contraseñaA.Text = "";
             txt_contraseñaN.Text = "";
+            txt_confirmacion.Text = "";
     }
     }
     }

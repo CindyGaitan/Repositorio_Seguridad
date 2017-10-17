@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace PrototipoSeguridad
 {
     public partial class AsignacionaPerfiles : Form
-    { string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD=1234; Database=bd_seguridad; ";
+    { string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ";
 
         public AsignacionaPerfiles()
         {
@@ -50,7 +50,7 @@ namespace PrototipoSeguridad
             {
                 MessageBox.Show(ex.Message);
             }
-            OdbcConnection conector = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD=1234; Database=bd_seguridad; ");
+            OdbcConnection conector = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ");
             conector.Open();
            
            

@@ -16,7 +16,7 @@ namespace PrototipoSeguridad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AsignacionaPerfiles());
+            Application.Run(new Login());
         }
     }
 }

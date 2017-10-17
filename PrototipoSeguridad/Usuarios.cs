@@ -84,6 +84,7 @@ namespace PrototipoSeguridad
                 txt_pNombre.Text = dgv.Cells[2].Value.ToString();
                 txt_pApellido.Text = dgv.Cells[3].Value.ToString();
                 txt_contraseña.Enabled = false;
+                txt_confirmacion.Enabled = false;
                 txt_correo.Text = dgv.Cells[4].Value.ToString();
                 txt_telefono.Text = dgv.Cells[5].Value.ToString();
             }
@@ -107,7 +108,7 @@ namespace PrototipoSeguridad
                 }
                 dr.Close();
 
-                if (id == 0)
+                if (id == 0 && txt_confirmacion.Text == txt_contraseña.Text)
                 {
                     com = new OdbcCommand("insert into usuario (usuario,nombre_usuario, apellido_usuario, contrasena, correo_usuario, telefono_usuario) values ('" + txt_usuario.Text + "','" + txt_pNombre.Text + "', '" + txt_pApellido.Text + "', AES_ENCRYPT( '" + txt_contraseña.Text + "','password'), '" + txt_correo.Text + "', " + Convert.ToInt32(txt_telefono.Text) + ")", con.conexion());
                     com.ExecuteNonQuery();
@@ -115,10 +116,16 @@ namespace PrototipoSeguridad
                     txt_usuario.Text = ""; txt_contraseña.Text = ""; txt_pNombre.Text = ""; txt_pApellido.Text = ""; txt_correo.Text = ""; txt_telefono.Text = "";
                     MessageBox.Show("Datos Ingresados");
                 }
+                else if (txt_confirmacion.Text != txt_contraseña.Text)
+                {
+                    MessageBox.Show("Contraseña no coincide con la Confirmación, Verificar.");
+                }
                 else
                 {
                     MessageBox.Show("Nombre de Usuario ya existe, ingrese uno distinto.");
                 }
+
+                
             }
             catch (Exception ex)
             {

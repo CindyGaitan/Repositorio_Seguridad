@@ -51,6 +51,8 @@
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_guardar = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_confirmacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).BeginInit();
             this.gpb_usuario.SuspendLayout();
             this.Pnl_botones.SuspendLayout();
@@ -61,12 +63,14 @@
             this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuario.Location = new System.Drawing.Point(360, 145);
             this.dgv_usuario.Name = "dgv_usuario";
-            this.dgv_usuario.Size = new System.Drawing.Size(458, 204);
+            this.dgv_usuario.Size = new System.Drawing.Size(458, 234);
             this.dgv_usuario.TabIndex = 6;
             this.dgv_usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuario_CellContentClick);
             // 
             // gpb_usuario
             // 
+            this.gpb_usuario.Controls.Add(this.txt_confirmacion);
+            this.gpb_usuario.Controls.Add(this.label1);
             this.gpb_usuario.Controls.Add(this.txt_usuario);
             this.gpb_usuario.Controls.Add(this.lbl_usuario);
             this.gpb_usuario.Controls.Add(this.txt_telefono);
@@ -82,7 +86,7 @@
             this.gpb_usuario.Controls.Add(this.lbl_pNombre);
             this.gpb_usuario.Location = new System.Drawing.Point(20, 145);
             this.gpb_usuario.Name = "gpb_usuario";
-            this.gpb_usuario.Size = new System.Drawing.Size(334, 204);
+            this.gpb_usuario.Size = new System.Drawing.Size(334, 234);
             this.gpb_usuario.TabIndex = 7;
             this.gpb_usuario.TabStop = false;
             this.gpb_usuario.Text = "DATOS USUARIO";
@@ -107,7 +111,7 @@
             // 
             // txt_telefono
             // 
-            this.txt_telefono.Location = new System.Drawing.Point(140, 160);
+            this.txt_telefono.Location = new System.Drawing.Point(140, 189);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(121, 20);
             this.txt_telefono.TabIndex = 31;
@@ -115,7 +119,7 @@
             // 
             // txt_correo
             // 
-            this.txt_correo.Location = new System.Drawing.Point(140, 134);
+            this.txt_correo.Location = new System.Drawing.Point(140, 163);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(121, 20);
             this.txt_correo.TabIndex = 30;
@@ -132,7 +136,7 @@
             // lbl_telefono
             // 
             this.lbl_telefono.AutoSize = true;
-            this.lbl_telefono.Location = new System.Drawing.Point(53, 160);
+            this.lbl_telefono.Location = new System.Drawing.Point(53, 189);
             this.lbl_telefono.Name = "lbl_telefono";
             this.lbl_telefono.Size = new System.Drawing.Size(49, 13);
             this.lbl_telefono.TabIndex = 27;
@@ -141,7 +145,7 @@
             // lbl_correo
             // 
             this.lbl_correo.AutoSize = true;
-            this.lbl_correo.Location = new System.Drawing.Point(53, 134);
+            this.lbl_correo.Location = new System.Drawing.Point(53, 163);
             this.lbl_correo.Name = "lbl_correo";
             this.lbl_correo.Size = new System.Drawing.Size(38, 13);
             this.lbl_correo.TabIndex = 26;
@@ -281,6 +285,23 @@
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Confirmación";
+            // 
+            // txt_confirmacion
+            // 
+            this.txt_confirmacion.Location = new System.Drawing.Point(140, 135);
+            this.txt_confirmacion.Name = "txt_confirmacion";
+            this.txt_confirmacion.PasswordChar = '*';
+            this.txt_confirmacion.Size = new System.Drawing.Size(121, 20);
+            this.txt_confirmacion.TabIndex = 35;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +346,8 @@
         private System.Windows.Forms.Label Lbl_editar;
         private System.Windows.Forms.Label Lbl_guardar;
         private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.TextBox txt_confirmacion;
+        private System.Windows.Forms.Label label1;
     }
 }
 

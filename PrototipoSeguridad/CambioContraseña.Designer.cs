@@ -39,12 +39,16 @@
             this.Lbl_guardar = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pnl_accion = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_confirmacion = new System.Windows.Forms.TextBox();
             this.gpb_cambio.SuspendLayout();
             this.pnl_accion.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpb_cambio
             // 
+            this.gpb_cambio.Controls.Add(this.txt_confirmacion);
+            this.gpb_cambio.Controls.Add(this.label1);
             this.gpb_cambio.Controls.Add(this.txt_contraseñaN);
             this.gpb_cambio.Controls.Add(this.txt_contraseñaA);
             this.gpb_cambio.Controls.Add(this.cmb_usuario);
@@ -85,7 +89,7 @@
             // lbl_contraseñaN
             // 
             this.lbl_contraseñaN.AutoSize = true;
-            this.lbl_contraseñaN.Location = new System.Drawing.Point(45, 95);
+            this.lbl_contraseñaN.Location = new System.Drawing.Point(43, 95);
             this.lbl_contraseñaN.Name = "lbl_contraseñaN";
             this.lbl_contraseñaN.Size = new System.Drawing.Size(96, 13);
             this.lbl_contraseñaN.TabIndex = 2;
@@ -141,6 +145,23 @@
             this.pnl_accion.Size = new System.Drawing.Size(235, 150);
             this.pnl_accion.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(45, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Confirmación";
+            // 
+            // txt_confirmacion
+            // 
+            this.txt_confirmacion.Location = new System.Drawing.Point(150, 121);
+            this.txt_confirmacion.Name = "txt_confirmacion";
+            this.txt_confirmacion.PasswordChar = '*';
+            this.txt_confirmacion.Size = new System.Drawing.Size(158, 20);
+            this.txt_confirmacion.TabIndex = 8;
+            // 
             // CambioContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,5 +191,7 @@
         private System.Windows.Forms.Label Lbl_guardar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnl_accion;
+        private System.Windows.Forms.TextBox txt_confirmacion;
+        private System.Windows.Forms.Label label1;
     }
 }
