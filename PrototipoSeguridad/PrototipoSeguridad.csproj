@@ -164,6 +164,36 @@
     <Compile Include="ReporteBitacora.Designer.cs">
       <DependentUpon>ReporteBitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteDAD_idapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_idcons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_idelimina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_idimp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_iding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_idmod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDAD_idusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDUP_ididusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDUP_idperfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDUP_idusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reporteerror.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -296,6 +326,102 @@
     <Compile Include="Reporte_Idbitacora.designer.cs">
       <DependentUpon>Reporte_Idbitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="rptAplicaciones_rep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAplicaciones_rep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAplicacion_des.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAplicacion_des.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAplicacion_hab.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAplicacion_hab.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptaplicacion_idapp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptaplicacion_idapp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptAplicacion_naplicacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAplicacion_naplicacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_cons.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_cons.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_Consultas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_Consultas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_elimina.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_elimina.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_idapp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_idapp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_idusuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_idusuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_imp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_imp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_ing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_ing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDAD_mod.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDAD_mod.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDUP_idusuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDUP_idusuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDUP_perfil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDUP_perfil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDUP_usuario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDUP_usuario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptidbitacora.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -408,6 +534,36 @@
     <EmbeddedResource Include="ReporteBitacora.resx">
       <DependentUpon>ReporteBitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idapp.resx">
+      <DependentUpon>ReporteDAD_idapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idcons.resx">
+      <DependentUpon>ReporteDAD_idcons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idelimina.resx">
+      <DependentUpon>ReporteDAD_idelimina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idimp.resx">
+      <DependentUpon>ReporteDAD_idimp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_iding.resx">
+      <DependentUpon>ReporteDAD_iding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idmod.resx">
+      <DependentUpon>ReporteDAD_idmod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDAD_idusuario.resx">
+      <DependentUpon>ReporteDAD_idusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDUP_ididusuario.resx">
+      <DependentUpon>ReporteDUP_ididusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDUP_idperfil.resx">
+      <DependentUpon>ReporteDUP_idperfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDUP_idusuario.resx">
+      <DependentUpon>ReporteDUP_idusuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporteerror.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Reporteerror.cs</LastGenOutput>
@@ -479,6 +635,70 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte_Idbitacora.resx">
       <DependentUpon>Reporte_Idbitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAplicaciones_rep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAplicaciones_rep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAplicacion_des.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAplicacion_des.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAplicacion_hab.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAplicacion_hab.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptaplicacion_idapp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptaplicacion_idapp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptAplicacion_naplicacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAplicacion_naplicacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_cons.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_cons.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_Consultas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_Consultas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_elimina.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_elimina.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_idapp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_idapp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_idusuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_idusuario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_imp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_imp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_ing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_ing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDAD_mod.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDAD_mod.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDUP_idusuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDUP_idusuario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDUP_perfil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDUP_perfil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDUP_usuario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDUP_usuario.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptidbitacora.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

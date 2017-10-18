@@ -286,3 +286,14 @@ C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSegur
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Reporte_Idbitacora.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.Usuarios.resources
 C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.csproj.GenerateResource.Cache
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\MantenimientoDerechosApp.Frm_MantenimientoApp.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idapp.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idcons.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idelimina.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idimp.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_iding.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idmod.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDAD_idusuario.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDUP_ididusuario.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDUP_idperfil.resources
+C:\Users\Alejandra\Desktop\Análisis II\Seguridad\Repo_Seguridad2\PrototipoSeguridad\obj\Debug\PrototipoSeguridad.ReporteDUP_idusuario.resources
